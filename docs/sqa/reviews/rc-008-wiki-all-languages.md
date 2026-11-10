@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-10 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-10 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [d32ecfc] |
 
 ---
 
@@ -56,3 +56,4 @@ Go — every criterion that can be checked before the merge passes (31 pages inc
 ---
 
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
+[d32ecfc]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/d32ecfc4bd092d1df4b384a04a729836d755d020
