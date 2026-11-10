@@ -10,6 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-10 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [d32ecfc] |
+| 2026-11-10 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Criterion 14 confirmed on the published wiki; verdict Go | [14996d5] |
 
 ---
 
@@ -39,13 +40,13 @@
 | 11 | Every page starts with the language line, with the current language in bold and a link to the same page in each other language | Pass | Each page starts with the language line, current language in bold, links to the other two. |
 | 12 | A page in a language other than English is named `<Page>-<code>.md`, with a BCP 47 code; English has no suffix | Pass | `-da` and `-ms` suffixes; English has none. |
 | 13 | Code blocks, commands, file names and IDs stay in English in every language | Pass | Routes, commands, file names and IDs are English in every language. |
-| 14 | The sidebar, every page and every link were checked on the published wiki after the change, not only in the repository | Pending | Can only be checked on the published wiki after the merge; a delta check records it. |
+| 14 | The sidebar, every page and every link were checked on the published wiki after the change, not only in the repository | Pass | Checked on the published wiki on 2026-11-10: all 30 pages return 200, the sidebar and Home list every page and both language Home pages, and the images load from `raw/branch/main/docs/images`. |
 | 15 | A change to the layout rules (sections, order, naming) is made in the generator or template and in this checklist's source rules together | N-A | Optional; no generator or template change. |
 | 16 | The wiki folder (`docs/wiki/`) is flat: every page, `Home.md` and `_Sidebar.md` included, is directly in it, and languages are told apart by file name, never by a subfolder | Pass | All 31 files are directly in `docs/wiki/`. |
 
 ## Overall Verdict
 
-Go — every criterion that can be checked before the merge passes (31 pages including the sidebar, 0 dead links, identical page sets in en, da and ms); criterion 14 is confirmed on the published wiki by a delta check after the merge. Mode: autonomous, not independent.
+Go — every criterion passes; criterion 14 was confirmed on the published wiki after the merge (delta check, criterion 14 only). Mode: autonomous, not independent.
 
 ## Action Items
 
@@ -57,3 +58,4 @@ Go — every criterion that can be checked before the merge passes (31 pages inc
 
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
 [d32ecfc]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/d32ecfc4bd092d1df4b384a04a729836d755d020
+[14996d5]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/14996d574be1dc2429806a7099765550278ed107
