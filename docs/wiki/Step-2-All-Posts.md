@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-2-All-Posts-da) · [Bahasa Malaysia](Step-2-All-Posts-ms)
 
 # 2. All posts from the database
 

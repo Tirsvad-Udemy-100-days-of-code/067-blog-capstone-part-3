@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-4-New-Post-Form-da) · [Bahasa Malaysia](Step-4-New-Post-Form-ms)
 
 # 4. The new-post form
 

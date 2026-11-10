@@ -20,7 +20,7 @@ Notes and screenshots for Day 67 of Udemy's "100 Days of Code: The Complete Pyth
 
 The Day 67 lecture takes the blog further: the posts come from a SQLite database (`posts.db`) through Flask-SQLAlchemy, and you can read, create, edit and delete posts inside the website, with WTForms and a CKEditor field for the post body.
 
-This repository documents what the lecture teaches. It holds **no application code**; the code belongs to the course. The lecture steps with screenshots are below, and the wiki explains what each step teaches.
+This repository documents what the lecture teaches. It holds **no application code**; the code belongs to the course. The lecture steps with screenshots are below, and the wiki explains what each step teaches, in English, Danish and Bahasa Malaysia.
 
 | Part | Purpose |
 | --- | --- |
@@ -31,7 +31,7 @@ This repository documents what the lecture teaches. It holds **no application co
 
 ## 🎓 Lecture steps
 
-The images are illustrations with example data, drawn for this repository from the lecture description; they are not captures of the course project. Each step has a wiki page that explains what we gained ([English][wiki-home]).
+The images are illustrations with example data, drawn for this repository from the lecture description; they are not captures of the course project. Each step has a wiki page that explains what we gained ([English][wiki-home], [Dansk][wiki-home-da], [Bahasa Malaysia][wiki-home-ms]).
 
 ### 1. The starting project
 
@@ -167,6 +167,8 @@ See [LICENSE](./LICENSE).
 [issues]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/issues
 [doxygen]: https://www.doxygen.nl/
 [wiki-home]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/wiki/Home
+[wiki-home-da]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/wiki/Home-da
+[wiki-home-ms]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/wiki/Home-ms
 [wiki-1]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/wiki/Step-1-Starting-Project
 [wiki-2]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/wiki/Step-2-All-Posts
 [wiki-3]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/wiki/Step-3-One-Post

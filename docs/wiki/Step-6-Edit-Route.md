@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-6-Edit-Route-da) · [Bahasa Malaysia](Step-6-Edit-Route-ms)
 
 # 6. The edit route
 

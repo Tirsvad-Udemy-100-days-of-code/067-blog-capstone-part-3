@@ -1,0 +1,25 @@
+[English](Step-9-Delete-Post) · [Dansk](Step-9-Delete-Post-da) · **Bahasa Malaysia**
+
+# 9. Padam catatan
+
+![Padam catatan](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/raw/branch/main/docs/images/step-9.png)
+
+*Ilustrasi dengan data contoh, dilukis untuk repositori ini berdasarkan huraian pelajaran. Ia bukan tangkapan projek kursus.*
+
+| Kata kerja | Laluan |
+| --- | --- |
+| `GET` | `/delete/<int:post_id>` |
+
+## Apa yang dilakukan pelajaran
+
+- Tambah pautan ✘ di sebelah setiap catatan dalam `index.html`.
+- Laluan `/delete/<post_id>` mengambil catatan, memadamnya, commit dan mengalih ke halaman utama.
+
+## Apa yang kita pelajari
+
+- Memadam memerlukan id dan commit, seperti operasi tulis yang lain.
+- Pautan padam mengubah data dengan GET; ia mudah tetapi tidak selamat daripada pra-ambil, jadi aplikasi sebenar lebih suka POST atau DELETE dengan pengesahan.
+
+---
+
+Sebelumnya: [Simpan suntingan](Step-8-Save-Edit-ms)
