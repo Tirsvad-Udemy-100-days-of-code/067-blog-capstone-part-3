@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-10 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [d32ecfc] |
-| 2026-11-10 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Criterion 14 confirmed on the published wiki; verdict Go | pending |
+| 2026-11-10 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Criterion 14 confirmed on the published wiki; verdict Go | [14996d5] |
 
 ---
 
@@ -58,3 +58,4 @@ Go — every criterion passes; criterion 14 was confirmed on the published wiki 
 
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
 [d32ecfc]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/d32ecfc4bd092d1df4b384a04a729836d755d020
+[14996d5]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/14996d574be1dc2429806a7099765550278ed107
