@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-8-Save-Edit-da) · [Bahasa Malaysia](Step-8-Save-Edit-ms)
 
 # 8. Save an edit
 

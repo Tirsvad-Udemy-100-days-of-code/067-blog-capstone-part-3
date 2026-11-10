@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-5-Save-New-Post-da) · [Bahasa Malaysia](Step-5-Save-New-Post-ms)
 
 # 5. Save a new post
 

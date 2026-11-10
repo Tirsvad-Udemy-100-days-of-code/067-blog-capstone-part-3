@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-3-One-Post-da) · [Bahasa Malaysia](Step-3-One-Post-ms)
 
 # 3. One post by its id
 

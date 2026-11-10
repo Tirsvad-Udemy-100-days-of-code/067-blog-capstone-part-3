@@ -1,4 +1,4 @@
-**English**
+**English** · [Dansk](Step-9-Delete-Post-da) · [Bahasa Malaysia](Step-9-Delete-Post-ms)
 
 # 9. Delete a post
 

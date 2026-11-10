@@ -10,3 +10,9 @@
 - [Pre-populated form](Step-7-Prefill-Form)
 - [Save an edit](Step-8-Save-Edit)
 - [Delete a post](Step-9-Delete-Post)
+
+**Languages**
+
+- English: [Home](Home)
+- Dansk: [Hjem](Home-da)
+- Bahasa Melayu: [Utama](Home-ms)
