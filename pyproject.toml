@@ -55,5 +55,5 @@ mypy_path = "src"
 
 # Bootstrap-Flask, Flask-WTF, Flask-CKEditor and WTForms ship no type information.
 [[tool.mypy.overrides]]
-module = ["flask_bootstrap", "flask_bootstrap.*", "flask_ckeditor", "flask_wtf", "wtforms", "wtforms.*"]
+module = ["flask_bootstrap", "flask_bootstrap.*", "flask_ckeditor", "flask_wtf", "wtforms", "wtforms.*", "playwright", "playwright.*"]
 ignore_missing_imports = true
