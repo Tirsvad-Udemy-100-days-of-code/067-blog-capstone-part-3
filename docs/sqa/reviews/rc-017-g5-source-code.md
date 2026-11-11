@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [ac11696] |
 
 ---
 
@@ -79,3 +79,4 @@ Go — every Mandatory criterion passes and no Optional criterion fails. Confirm
 [MIL-005]: ../../milestones/mil-005-create-and-edit-posts.md
 [BC-001]: ../../business-case.md
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
+[ac11696]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/ac11696bc9343031b4a1b1709b2a7243adc3b982
