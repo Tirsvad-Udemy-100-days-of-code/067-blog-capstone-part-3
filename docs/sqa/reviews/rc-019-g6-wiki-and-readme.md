@@ -10,6 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [dcb624d] |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Criterion 14 confirmed on the published wiki; verdict Go | [04ccdbd] |
 
 ---
 
@@ -47,7 +48,7 @@
 | 11 | Language line on every page | Pass | Checked by script. |
 | 12 | Page naming `<Page>-<code>.md` | Pass | `-da`, `-ms`; English has no suffix. |
 | 13 | Code blocks, commands, file names and IDs stay in English | Pass | Routes, commands, paths and class names in the new sections are English in every language. |
-| 14 | Sidebar, pages and links checked on the published wiki after the change | Pending | The publish workflow runs after the merge. To be checked on the published wiki then, as done in [RC-008]. |
+| 14 | Sidebar, pages and links checked on the published wiki after the change | Pass | Checked on the published wiki on 2026-11-11 after PR 48 merged: all 30 pages return 200; `Home` lists every page of all three languages; the step 9 pages show `DeletePost`, `delete_post` and `delete_post.py`; the Home and step pages carry the new text in all three languages. |
 | 15 | Layout rule changes made in the generator and the checklist together | N-A | Optional; no layout rule changed. |
 | 16 | Wiki folder is flat | Pass | All files directly in `docs/wiki/`. |
 
@@ -62,13 +63,12 @@
 
 ## Overall Verdict
 
-Go, with one condition: criterion 14 (published wiki) stays pending until after the merge. Every other criterion passes. The Danish and Bahasa Malaysia language criteria remain with S01 as in [RC-008]; the Bahasa Malaysia terms "kes guna", "kilang aplikasi", "port repositori" and "peraturan domain" need a native reader. Mode: supervised, AI draft.
+Go — every criterion passes; criterion 14 was confirmed on the published wiki after the merge (delta check, criterion 14 only). The Danish and Bahasa Malaysia language criteria remain with S01 as in [RC-008]; the Bahasa Malaysia terms "kes guna", "kilang aplikasi", "port repositori" and "peraturan domain" need a native reader. Mode: supervised, AI draft.
 
 ## Action Items
 
 | Action | Owner | Due |
 | --- | --- | --- |
-| After the merge, check all pages and the sidebar on the published wiki and close criterion 14 | S01 | 2026-11-18 |
 | Have a native reader confirm the Bahasa Malaysia terms listed above | S01 | 2026-11-18 |
 | Read the Danish additions | S01 | 2026-11-18 |
 
@@ -78,3 +78,4 @@ Go, with one condition: criterion 14 (published wiki) stays pending until after 
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
 [RC-008]: ./rc-008-wiki-all-languages.md
 [dcb624d]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/dcb624dfc80e7f8600fede54fb1c648d7f95d2a3
+[04ccdbd]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/04ccdbd7b32912d3c48e54a54ec08f16ee3f22dd
