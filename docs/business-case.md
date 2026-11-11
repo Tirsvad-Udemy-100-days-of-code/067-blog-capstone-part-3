@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-10 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-001; autonomous, not independent | [58e2942] |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Scope now includes the working Day 67 blog application (G4 to G6), runtime dependencies and end date 2026-11-18 | [bb4ab74] |
+| 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-001; autonomous, not independent | [58e2942] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | Scope now includes the working Day 67 blog application (G4 to G6), runtime dependencies and end date 2026-11-18; Go on RC-009, supervised | [bb4ab74] |
 
 ---
 
@@ -87,9 +87,9 @@ The repository belongs to the Tirsvad Udemy 100 Days of Code collection, one rep
 | 4 | Repository metadata | Description set and at least 5 topics | Gitea API response |
 | 5 | Security scan | 0 findings of High or Critical severity | opengrep output before each push |
 | 6 | Runtime dependencies | Only the five named in scope | `dependencies` list in `pyproject.toml` |
+| 7 | Reviews | 100 percent of artifacts have an `RC-*` verdict | Files in `docs/sqa/reviews/` |
 | 8 | Application routes | 5 of 5 work | Route tests pass in `python -m pytest` |
 | 9 | Code review | Every code milestone has a `Go` against its `qc-programming-*` checklist | Files in `docs/sqa/reviews/` |
-| 7 | Reviews | 100 percent of artifacts have an `RC-*` verdict | Files in `docs/sqa/reviews/` |
 
 ## Risks
 

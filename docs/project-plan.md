@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-10 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-003; autonomous, not independent | [58e2942] |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Added gateways G4 to G6 for the blog application; end date moved to 2026-11-18 | [bb4ab74] |
+| 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-003; autonomous, not independent | [58e2942] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | Added gateways G4 to G6 for the blog application; end date moved to 2026-11-18; Go on RC-011, supervised | [bb4ab74] |
 
 ---
 
@@ -25,7 +25,7 @@ This plan schedules six gateways: G1 to G3 delivered the Day 67 README and trili
 - The project starts 2026-11-10 and ends by 2026-11-18, per the revised Business Case constraint.
 - Each gateway is one branch and one pull request. Gateway length is two to three days.
 - S01 owns and approves every gateway, as in [SA-001]; the AI acts as stand-in in autonomous mode.
-- Screenshots are illustrations with example data, because no code is run (see Open Issues).
+- Screenshots are illustrations with example data, until S01 supplies captures of the running app (see Open Issues).
 
 ## Gateway Schedule
 

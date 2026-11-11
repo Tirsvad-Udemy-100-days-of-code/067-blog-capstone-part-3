@@ -11,7 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [bb4ab74] |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [bb4ab74] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | Accepted on a Go review, RC-015; supervised, S01 accepted in chat | pending |
 
 ---
 

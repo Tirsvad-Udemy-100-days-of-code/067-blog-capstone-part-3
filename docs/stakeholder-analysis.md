@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-10 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-002; autonomous, not independent | [58e2942] |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | CN-005 allows the app's runtime dependencies; communication rows cover MIL-004 to MIL-006 | [bb4ab74] |
+| 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-002; autonomous, not independent | [58e2942] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | CN-005 allows the app's runtime dependencies; communication rows cover MIL-004 to MIL-006; Go on RC-010, supervised | [bb4ab74] |
 
 ---
 
@@ -58,7 +58,7 @@ This analysis identifies who has influence over, or interest in, the Day 67 docu
 | Conflict | Stakeholders | Mitigation |
 | --- | --- | --- |
 | S01 wants rich explanation, S03 wants a short README | S01, S03 | The README stays brief with step summaries and links; depth is in the wiki |
-| S02 wants runnable code, the scope has no code | S02, S01 | The README states plainly that the repository documents the lecture and holds no application code, and points to the course resources |
+| S02 wants runnable code, S03 wants few dependencies | S02, S03 | The app is built in G4 to G6 with only the five named dependencies; the README Setup installs them with one command |
 
 ## Traceability Analysis
 
