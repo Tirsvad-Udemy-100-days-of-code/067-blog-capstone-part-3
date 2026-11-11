@@ -12,6 +12,7 @@ Notes and screenshots for Day 67 of Udemy's "100 Days of Code: The Complete Pyth
 - [Setup](#-setup)
 - [Run](#-run)
 - [Tests](#-tests)
+- [Screenshots](#-screenshots)
 - [License](#-license)
 - [Links](#-links)
 - [Appendix: Project documents](#-appendix-project-documents)
@@ -31,7 +32,7 @@ This repository documents what the lecture teaches and holds a working version o
 
 ## 🎓 Lecture steps
 
-The images are illustrations with example data, drawn for this repository from the lecture description; they are not captures of the course project. Each step has a wiki page that explains what we gained and names the file in `src/blog/` that implements it ([English][wiki-home], [Dansk][wiki-home-da], [Bahasa Malaysia][wiki-home-ms]).
+The images are screenshots of this repository's blog running with example data (see [Screenshots](#-screenshots)); they are not captures of the course project. Each step has a wiki page that explains what we gained and names the file in `src/blog/` that implements it ([English][wiki-home], [Dansk][wiki-home-da], [Bahasa Malaysia][wiki-home-ms]).
 
 ### 1. The starting project
 
@@ -152,6 +153,25 @@ python -m ruff format --check src tests
 python -m mypy --strict src
 ```
 
+## 📸 Screenshots
+
+The nine images in `docs/images/` are screenshots of this repository's blog running with example data. [`tests/e2e/capture_screenshots.py`][capture-script] starts the app on a throw-away database, drives a headless Chromium through the nine lecture steps and writes `step-1.png` to `step-9.png`. It runs only in a Docker container, never on your desktop:
+
+```bash
+bash tests/e2e/run-in-docker.sh
+```
+
+[`tests/e2e/run-in-docker.sh`][docker-runner] mounts the repository read-only, installs the project inside the container and writes the images to `docs/images/` (pass another folder as the first argument). Set `SCREENSHOT_IMAGE` to use another image than `mcr.microsoft.com/playwright/python:v1.55.0-noble`; it needs Playwright 1.55 with Chromium. The container needs internet for PyPI, the CKEditor CDN and the picture host of the example posts.
+
+Steps 1 and 2 show the same page, because the list fits in the browser window. Steps 6 and 7 show the edit page, at first view and full page. Step 5 shows the list after saving a new post, step 8 the post after the edit and step 9 the list after the post was deleted.
+
+| Item | Value |
+| --- | --- |
+| Captured | 2026-11-11 |
+| Script | `tests/e2e/capture_screenshots.py` |
+| Environment | Docker container with headless Chromium (Playwright 1.55), window 1000 x 700 |
+| Data | The three example posts of `seed-db`, plus one example post written and edited by the script |
+
 ## 📄 License
 
 See [LICENSE](./LICENSE).
@@ -178,6 +198,8 @@ See [LICENSE](./LICENSE).
 ---
 
 [repository]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3
+[capture-script]: ./tests/e2e/capture_screenshots.py
+[docker-runner]: ./tests/e2e/run-in-docker.sh
 [wiki]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/wiki
 [issues]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/issues
 [doxygen]: https://www.doxygen.nl/

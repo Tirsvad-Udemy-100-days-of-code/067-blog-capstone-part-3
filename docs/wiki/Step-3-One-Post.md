@@ -4,7 +4,7 @@
 
 ![One post by its id](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/raw/branch/main/docs/images/step-3.png)
 
-*Illustration with example data, drawn for this repository from the lecture description. It is not a capture of the course project.*
+*Screenshot of this repository's blog running with example data, captured in a headless browser in a Docker container (see the README). It is not a capture of the course project.*
 
 | Verb | Route |
 | --- | --- |

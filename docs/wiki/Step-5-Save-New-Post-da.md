@@ -4,7 +4,7 @@
 
 ![Gem et nyt indlæg](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/raw/branch/main/docs/images/step-5.png)
 
-*Illustration med eksempeldata, tegnet til dette repositorium ud fra lektionsbeskrivelsen. Det er ikke et skærmbillede af kursusprojektet.*
+*Skærmbillede af dette repositoriums blog, der kører med eksempeldata, optaget i en browser uden vindue i en Docker-container (se README). Det er ikke et skærmbillede af kursusprojektet.*
 
 | Verbum | Rute |
 | --- | --- |
