@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [dcb624d] |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Criterion 14 confirmed on the published wiki; verdict Go | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Criterion 14 confirmed on the published wiki; verdict Go | [04ccdbd] |
 
 ---
 
@@ -78,3 +78,4 @@ Go — every criterion passes; criterion 14 was confirmed on the published wiki 
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
 [RC-008]: ./rc-008-wiki-all-languages.md
 [dcb624d]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/dcb624dfc80e7f8600fede54fb1c648d7f95d2a3
+[04ccdbd]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/04ccdbd7b32912d3c48e54a54ec08f16ee3f22dd
