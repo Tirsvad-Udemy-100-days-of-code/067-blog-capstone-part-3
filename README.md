@@ -20,7 +20,7 @@ Notes and screenshots for Day 67 of Udemy's "100 Days of Code: The Complete Pyth
 
 The Day 67 lecture takes the blog further: the posts come from a SQLite database (`posts.db`) through Flask-SQLAlchemy, and you can read, create, edit and delete posts inside the website, with WTForms and a CKEditor field for the post body.
 
-This repository documents what the lecture teaches and holds a working version of the blog, written for this repository (not the course code). The blog is built in layers under `src/`; read and delete are added step by step as the project milestones G4 to G6 land, and the read routes `/` and `/post/<post_id>` work today. The lecture steps with screenshots are below, and the wiki explains what each step teaches, in English, Danish and Bahasa Malaysia.
+This repository documents what the lecture teaches and holds a working version of the blog, written for this repository (not the course code). The blog is built in layers under `src/`; the routes are added step by step as the project milestones G4 to G6 land. Today you can list posts at `/`, read one at `/post/<post_id>`, write one at `/new-post` and edit one at `/edit-post/<post_id>`; delete follows in G6. The lecture steps with screenshots are below, and the wiki explains what each step teaches, in English, Danish and Bahasa Malaysia.
 
 | Part | Purpose |
 | --- | --- |
@@ -128,7 +128,9 @@ flask --app blog.presentation.app_factory:create_app seed-db
 flask --app blog.presentation.app_factory:create_app run
 ```
 
-Open <http://127.0.0.1:5000/> to see all posts and click a title to read one. The database file `posts.db` is created in Flask's `instance` folder (`src/instance/`); set `BLOG_DATABASE_URI` to use another one. To build the source documentation:
+Open <http://127.0.0.1:5000/> to see all posts and click a title to read one. The database file `posts.db` is created in Flask's `instance` folder (`src/instance/`); set `BLOG_DATABASE_URI` to use another one. The forms need a secret key: set `BLOG_SECRET_KEY`, or a random key is made at each start (sessions then do not survive a restart). The post editor (CKEditor) loads from a CDN, so the browser needs internet.
+
+Run the app only on your own computer: a post body is stored and shown as unsanitised HTML, and there is no login. To build the source documentation:
 
 ```bash
 doxygen Doxyfile

@@ -13,7 +13,12 @@ from blog.presentation.composition_root import build_repository
 @pytest.fixture
 def app() -> Iterator[Flask]:
     application = create_app(
-        {"TESTING": True, "SQLALCHEMY_DATABASE_URI": "sqlite:///:memory:"}
+        {
+            "TESTING": True,
+            "SQLALCHEMY_DATABASE_URI": "sqlite:///:memory:",
+            "WTF_CSRF_ENABLED": False,
+            "SECRET_KEY": "test",
+        }
     )
     with application.app_context():
         seed_if_empty(build_repository())

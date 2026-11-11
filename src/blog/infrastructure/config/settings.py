@@ -1,8 +1,13 @@
 """Default configuration values, read from the environment."""
 
 import os
+import secrets
 
-from blog.constants import DATABASE_FILE_NAME, DATABASE_URI_ENVIRONMENT_VARIABLE
+from blog.constants import (
+    DATABASE_FILE_NAME,
+    DATABASE_URI_ENVIRONMENT_VARIABLE,
+    SECRET_KEY_ENVIRONMENT_VARIABLE,
+)
 
 # A relative SQLite path is resolved by Flask-SQLAlchemy inside the Flask
 # instance folder.
@@ -15,4 +20,8 @@ def load_default_config() -> dict[str, object]:
         "SQLALCHEMY_DATABASE_URI": os.environ.get(
             DATABASE_URI_ENVIRONMENT_VARIABLE, DEFAULT_DATABASE_URI
         ),
+        # Without BLOG_SECRET_KEY a random key is made per start, so sessions
+        # and CSRF tokens do not survive a restart.
+        "SECRET_KEY": os.environ.get(SECRET_KEY_ENVIRONMENT_VARIABLE)
+        or secrets.token_hex(),
     }
