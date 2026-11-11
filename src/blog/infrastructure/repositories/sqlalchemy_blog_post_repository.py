@@ -55,3 +55,21 @@ class SqlAlchemyBlogPostRepository:
         stored = _to_entity(model)
         self._session.commit()
         return stored
+
+    def update(self, post: BlogPost) -> BlogPost | None:
+        """Overwrite the stored post with the same id, or return ``None``."""
+        if post.post_id is None:
+            return None
+        model = self._session.get(BlogPostModel, post.post_id)
+        if model is None:
+            return None
+        model.title = post.title
+        model.subtitle = post.subtitle
+        model.posted_on = post.posted_on
+        model.body = post.body
+        model.author = post.author
+        model.img_url = post.img_url
+        self._session.flush()
+        updated = _to_entity(model)
+        self._session.commit()
+        return updated

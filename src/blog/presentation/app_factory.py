@@ -5,6 +5,8 @@ from collections.abc import Mapping
 import click
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap5
+from flask_ckeditor import CKEditor
+from flask_wtf import CSRFProtect
 from werkzeug.exceptions import NotFound
 
 from blog.constants import APP_TITLE, HTTP_NOT_FOUND
@@ -29,6 +31,8 @@ def create_app(test_config: Mapping[str, object] | None = None) -> Flask:
 
     db.init_app(app)
     Bootstrap5(app)
+    CKEditor(app)
+    CSRFProtect(app)
     app.jinja_env.globals["APP_TITLE"] = APP_TITLE
     with app.app_context():
         db.create_all()

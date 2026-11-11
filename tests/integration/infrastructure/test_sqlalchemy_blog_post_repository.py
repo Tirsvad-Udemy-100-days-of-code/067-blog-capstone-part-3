@@ -1,4 +1,5 @@
 from collections.abc import Iterator
+from dataclasses import replace
 
 import pytest
 from sqlalchemy import create_engine
@@ -57,3 +58,26 @@ def test_seed_if_empty_inserts_once(
     assert seed_if_empty(repository) == len(SEED_POSTS)
     assert seed_if_empty(repository) == 0
     assert len(repository.list_all()) == len(SEED_POSTS)
+
+
+def test_update_changes_fields_and_persists_them(
+    repository: SqlAlchemyBlogPostRepository,
+) -> None:
+    stored = repository.add(make_post())
+    changed = replace(stored, title="Changed", body="<p>Changed</p>")
+
+    assert repository.update(changed) == changed
+    assert repository.find_by_id(1) == changed
+
+
+def test_update_returns_none_when_id_is_unknown(
+    repository: SqlAlchemyBlogPostRepository,
+) -> None:
+    assert repository.update(make_post(post_id=99)) is None
+    assert repository.list_all() == []
+
+
+def test_update_returns_none_for_post_without_id(
+    repository: SqlAlchemyBlogPostRepository,
+) -> None:
+    assert repository.update(make_post()) is None

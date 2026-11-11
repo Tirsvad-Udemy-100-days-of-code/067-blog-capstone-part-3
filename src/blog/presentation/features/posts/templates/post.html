@@ -6,7 +6,10 @@
     <p class="lead">{{ post.subtitle }}</p>
     <p class="text-muted">Posted by {{ post.author }} on {{ post.posted_on_text }}</p>
     <img class="img-fluid mb-3" src="{{ post.img_url }}" alt="">
-    {# body_html is trusted HTML written by the blog author #}
+    {# Known risk: body_html is HTML from the CKEditor and is NOT sanitised,
+       so `| safe` lets a post run script. Accepted because the app is local
+       and has no login; sanitise it before the app is ever exposed. #}
     <div>{{ post.body_html | safe }}</div>
   </article>
+  <a class="btn btn-primary mt-3" href="{{ url_for('posts.edit_post', post_id=post.post_id) }}">Edit Post</a>
 {% endblock %}

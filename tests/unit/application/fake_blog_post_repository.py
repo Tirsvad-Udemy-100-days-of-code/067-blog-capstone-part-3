@@ -22,3 +22,9 @@ class FakeBlogPostRepository:
         stored = replace(post, post_id=new_id)
         self._posts[new_id] = stored
         return stored
+
+    def update(self, post: BlogPost) -> BlogPost | None:
+        if post.post_id is None or post.post_id not in self._posts:
+            return None
+        self._posts[post.post_id] = post
+        return post

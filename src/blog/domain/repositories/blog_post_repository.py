@@ -19,3 +19,11 @@ class BlogPostRepository(Protocol):
     def add(self, post: BlogPost) -> BlogPost:
         """Store a new post and return it with its id set."""
         ...
+
+    def update(self, post: BlogPost) -> BlogPost | None:
+        """Store the changed fields of ``post``, found by its id.
+
+        Return the stored post, or ``None`` when no post has that id (nothing
+        is stored then).
+        """
+        ...

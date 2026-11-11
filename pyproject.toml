@@ -53,7 +53,7 @@ python_version = "3.13"
 strict = true
 mypy_path = "src"
 
-# Bootstrap-Flask ships no type information.
+# Bootstrap-Flask, Flask-WTF, Flask-CKEditor and WTForms ship no type information.
 [[tool.mypy.overrides]]
-module = ["flask_bootstrap", "flask_bootstrap.*"]
+module = ["flask_bootstrap", "flask_bootstrap.*", "flask_ckeditor", "flask_wtf", "wtforms", "wtforms.*"]
 ignore_missing_imports = true

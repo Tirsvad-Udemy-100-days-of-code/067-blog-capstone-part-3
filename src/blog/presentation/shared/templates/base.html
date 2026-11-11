@@ -10,11 +10,13 @@
   <nav class="navbar navbar-expand bg-body-tertiary mb-4">
     <div class="container">
       <a class="navbar-brand" href="{{ url_for('posts.show_all_posts') }}">{{ APP_TITLE }}</a>
+      <a class="nav-link" href="{{ url_for('posts.add_new_post') }}">New Post</a>
     </div>
   </nav>
   <main class="container">
     {% block content %}{% endblock %}
   </main>
   {{ bootstrap.load_js() }}
+  {% block scripts %}{% endblock %}
 </body>
 </html>
