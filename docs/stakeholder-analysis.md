@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [58e2942] |
 | 2026-11-10 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-002; autonomous, not independent | [58e2942] |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | CN-005 allows the app's runtime dependencies; communication rows cover MIL-004 to MIL-006 | pending |
 
 ---
 
@@ -26,7 +26,7 @@ This analysis identifies who has influence over, or interest in, the Day 67 docu
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | S01 | Jens Tirsvad Nielsen | Course participant, Product Owner, developer and reviewer | Tirsystem | HIGH | HIGH | Manage Closely | A faithful, illustrated record of what the lecture taught |
 | S02 | Udemy coursists | Fellow course participants | Udemy community | LOW | HIGH | Keep Informed | Readable, runnable material with the assignment's function names, and README instructions to run it |
-| S03 | GitHub viewers | Repository visitors | Public | LOW | LOW | Monitor | A clear description, topics and README, and no runtime dependencies |
+| S03 | GitHub viewers | Repository visitors | Public | LOW | LOW | Monitor | A clear description, topics and README, and a short, documented list of runtime dependencies |
 
 ## Power/Interest Classification Rationale
 
@@ -42,16 +42,16 @@ This analysis identifies who has influence over, or interest in, the Day 67 docu
 | CN-002 | S02 | README instructions to run the project and its tests work as written | Usability |
 | CN-003 | S02 | Material uses the assignment's names for routes and functions | Functionality |
 | CN-004 | S03 | The repository has a clear description, topics and README | Usability |
-| CN-005 | S03 | No runtime dependencies to install or trust | Supportability |
+| CN-005 | S03 | Few runtime dependencies, each named and installable with one command | Supportability |
 | CN-006 | S01 | The wiki exists in English, Danish and Bahasa Malaysia | Functionality |
 
 ## Communication Requirements
 
 | ID | Channel | Frequency | Deliverable | Phase / Milestone |
 | --- | --- | --- | --- | --- |
-| CR-001 | Chat | Per milestone | Plan and review summary | MIL-001, MIL-002, MIL-003 |
-| CR-002 | Pull request | Per milestone | Reviewable change | MIL-001, MIL-002, MIL-003 |
-| CR-003 | README and wiki | On merge | Published documentation | MIL-002, MIL-003 |
+| CR-001 | Chat | Per milestone | Plan and review summary | MIL-001, MIL-002, MIL-003, MIL-004, MIL-005, MIL-006 |
+| CR-002 | Pull request | Per milestone | Reviewable change | MIL-001, MIL-002, MIL-003, MIL-004, MIL-005, MIL-006 |
+| CR-003 | README and wiki | On merge | Published documentation | MIL-002, MIL-003, MIL-006 |
 
 ## Conflicting Interests and Mitigations
 
