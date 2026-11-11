@@ -27,3 +27,10 @@ class BlogPostRepository(Protocol):
         is stored then).
         """
         ...
+
+    def delete(self, post_id: int) -> bool:
+        """Remove the post with ``post_id``.
+
+        Return ``True`` when a post was deleted, ``False`` when none had that id.
+        """
+        ...

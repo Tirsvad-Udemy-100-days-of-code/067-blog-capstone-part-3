@@ -20,6 +20,14 @@
 - A SELECT of all rows gives the Read of CRUD for a list.
 - The template does not care where the data came from, only that the rows have the same fields.
 
+## Where it is in the code
+
+- Route `show_all_posts` — `src/blog/presentation/features/posts/routes.py`
+- Use case — `src/blog/application/use_cases/list_posts.py`
+- Template — `src/blog/presentation/features/posts/templates/index.html`
+
+The route does not query the database itself: it calls the `ListPosts` use case, which reads through a repository port, and the template gets plain view models.
+
 ---
 
 Previous: [The starting project](Step-1-Starting-Project) · Next: [One post by its id](Step-3-One-Post)

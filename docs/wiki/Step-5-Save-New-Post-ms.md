@@ -22,6 +22,14 @@
 - Alih selepas POST mengelakkan penghantaran berganda apabila halaman dimuat semula.
 - `safe` hanya wajar apabila pengarang boleh dipercayai; HTML yang tidak dibersihkan boleh membawa skrip.
 
+## Di mana dalam kod
+
+- Laluan `add_new_post` (POST) — `src/blog/presentation/features/posts/routes.py`
+- Kes guna — `src/blog/application/use_cases/create_post.py`
+- Pengesahan — `src/blog/domain/rules/post_validation.py`
+
+Kes guna `CreatePost` menetapkan tarikh sebagai `date` sebenar (hari ini), mengesahkan kandungan dengan peraturan domain, dan halaman memaparkannya sebagai "Month DD, YYYY".
+
 ---
 
 Sebelumnya: [Borang catatan baharu](Step-4-New-Post-Form-ms) · Seterusnya: [Laluan sunting](Step-6-Edit-Route-ms)

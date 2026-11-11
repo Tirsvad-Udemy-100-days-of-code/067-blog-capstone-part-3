@@ -2,7 +2,18 @@
 
 # Dag 67: wiki om den RESTful blog
 
-Noter om dag 67 i Udemy-kurset 100 Days of Code: bloggen udvides, så indlæg kommer fra en database og kan oprettes, redigeres og slettes på selve hjemmesiden. Denne wiki forklarer hvert trin og hvad vi lærte af det. Repositoriet indeholder ingen programkode; koden hører til kurset.
+Noter om dag 67 i Udemy-kurset 100 Days of Code: bloggen udvides, så indlæg kommer fra en database og kan oprettes, redigeres og slettes på selve hjemmesiden. Denne wiki forklarer hvert trin og hvad vi lærte af det. Repositoriet indeholder en fungerende version af bloggen under `src/blog`. Kør den med `flask --app blog.presentation.app_factory:create_app run` efter `flask --app blog.presentation.app_factory:create_app seed-db`; se README.
+
+## Koden
+
+Koden under `src/blog` er delt i lag, og hvert lag afhænger kun af dem indenfor:
+
+- **domain**: indlægsentiteten, valideringsreglen, fejlene og repository-porten.
+- **application**: use cases (list, hent, opret, opdater, slet) og de data de tager imod.
+- **infrastructure**: SQLAlchemy-lagring, repositoryet, indstillingerne og eksempelindlæggene.
+- **presentation**: Flask-app-fabrikken, ruter, formularer og skabeloner.
+
+Hver trinside nedenfor slutter med, hvor dens kode findes.
 
 ## CRUD og HTTP-verberne
 

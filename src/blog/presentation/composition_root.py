@@ -1,6 +1,7 @@
 """The one place that wires adapters to use cases."""
 
 from blog.application.use_cases.create_post import CreatePost
+from blog.application.use_cases.delete_post import DeletePost
 from blog.application.use_cases.get_post import GetPost
 from blog.application.use_cases.list_posts import ListPosts
 from blog.application.use_cases.update_post import UpdatePost
@@ -33,3 +34,8 @@ def build_create_post() -> CreatePost:
 def build_update_post() -> UpdatePost:
     """Build the ``UpdatePost`` use case."""
     return UpdatePost(build_repository())
+
+
+def build_delete_post() -> DeletePost:
+    """Build the ``DeletePost`` use case."""
+    return DeletePost(build_repository())

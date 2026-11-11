@@ -22,6 +22,14 @@
 - Redirect after POST avoids a duplicate submission on refresh.
 - `safe` is only acceptable when the authors are trusted; unsanitised HTML can carry a script.
 
+## Where it is in the code
+
+- Route `add_new_post` (POST) — `src/blog/presentation/features/posts/routes.py`
+- Use case — `src/blog/application/use_cases/create_post.py`
+- Validation — `src/blog/domain/rules/post_validation.py`
+
+The `CreatePost` use case sets the date as a real `date` (today), validates the content with a domain rule, and the page shows it as "Month DD, YYYY".
+
 ---
 
 Previous: [The new-post form](Step-4-New-Post-Form) · Next: [The edit route](Step-6-Edit-Route)

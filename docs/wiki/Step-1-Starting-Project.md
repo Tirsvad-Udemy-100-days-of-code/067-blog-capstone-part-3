@@ -21,6 +21,14 @@
 - A project is easier to understand when you first look at its files and its data.
 - A database replaces a remote JSON bin: one local file, same fields.
 
+## Where it is in the code
+
+- App factory — `src/blog/presentation/app_factory.py` (`create_app`, `seed-db`)
+- Model — `src/blog/infrastructure/persistence/blog_post_model.py`
+- Example posts — `src/blog/infrastructure/seed.py`
+
+Unlike the lecture, there is no downloaded `posts.db`: the `seed-db` command fills a new database with example posts, and the app is built by `create_app`.
+
 ---
 
 Previous: [Home](Home) · Next: [All posts from the database](Step-2-All-Posts)

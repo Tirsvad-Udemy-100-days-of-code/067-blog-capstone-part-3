@@ -20,7 +20,7 @@ Notes and screenshots for Day 67 of Udemy's "100 Days of Code: The Complete Pyth
 
 The Day 67 lecture takes the blog further: the posts come from a SQLite database (`posts.db`) through Flask-SQLAlchemy, and you can read, create, edit and delete posts inside the website, with WTForms and a CKEditor field for the post body.
 
-This repository documents what the lecture teaches and holds a working version of the blog, written for this repository (not the course code). The blog is built in layers under `src/`; the routes are added step by step as the project milestones G4 to G6 land. Today you can list posts at `/`, read one at `/post/<post_id>`, write one at `/new-post` and edit one at `/edit-post/<post_id>`; delete follows in G6. The lecture steps with screenshots are below, and the wiki explains what each step teaches, in English, Danish and Bahasa Malaysia.
+This repository documents what the lecture teaches and holds a working version of the blog, written for this repository (not the course code). The blog is built in layers under `src/`; you can list posts at `/`, read one at `/post/<post_id>`, write one at `/new-post`, edit one at `/edit-post/<post_id>` and delete one at `/delete/<post_id>`. The lecture steps with screenshots are below, and the wiki explains what each step teaches, in English, Danish and Bahasa Malaysia.
 
 | Part | Purpose |
 | --- | --- |
@@ -31,11 +31,11 @@ This repository documents what the lecture teaches and holds a working version o
 
 ## 🎓 Lecture steps
 
-The images are illustrations with example data, drawn for this repository from the lecture description; they are not captures of the course project. Each step has a wiki page that explains what we gained ([English][wiki-home], [Dansk][wiki-home-da], [Bahasa Malaysia][wiki-home-ms]).
+The images are illustrations with example data, drawn for this repository from the lecture description; they are not captures of the course project. Each step has a wiki page that explains what we gained and names the file in `src/blog/` that implements it ([English][wiki-home], [Dansk][wiki-home-da], [Bahasa Malaysia][wiki-home-ms]).
 
 ### 1. The starting project
 
-Set up the virtual environment, look at `main.py` and the `posts.db` database. [Read more][wiki-1]
+Set up the virtual environment, seed the `posts.db` database and look at the app factory `create_app` in `src/blog/presentation/app_factory.py`. [Read more][wiki-1]
 
 ![The starting project](./docs/images/step-1.png)
 

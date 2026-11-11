@@ -20,6 +20,14 @@
 - A value in the URL (a path parameter) selects one resource.
 - Fetching by primary key is the normal way to read one row.
 
+## Where it is in the code
+
+- Route `show_post` — `src/blog/presentation/features/posts/routes.py`
+- Use case — `src/blog/application/use_cases/get_post.py`
+- Template — `src/blog/presentation/features/posts/templates/post.html`
+
+The route calls the `GetPost` use case; an unknown id raises `PostNotFoundError`, which the route turns into a 404 page.
+
 ---
 
 Previous: [All posts from the database](Step-2-All-Posts) · Next: [The new-post form](Step-4-New-Post-Form)

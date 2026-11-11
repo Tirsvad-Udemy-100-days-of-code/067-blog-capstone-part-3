@@ -20,6 +20,13 @@
 - Én skabelon kan klare to opgaver, når et flag ændrer teksten.
 - Rutens navn og id'et i URL'en fortæller, hvad der redigeres.
 
+## Hvor det er i koden
+
+- Rute `edit_post` — `src/blog/presentation/features/posts/routes.py`
+- Skabelon — `src/blog/presentation/features/posts/templates/make-post.html` ("Edit Post")
+
+Én rutefunktion håndterer både GET og POST og giver overskriften "Edit Post" videre til den fælles skabelon.
+
 ---
 
 Forrige: [Gem et nyt indlæg](Step-5-Save-New-Post-da) · Næste: [Forudfyldt formular](Step-7-Prefill-Form-da)

@@ -20,6 +20,14 @@
 - Memadam memerlukan id dan commit, seperti operasi tulis yang lain.
 - Pautan padam mengubah data dengan GET; ia mudah tetapi tidak selamat daripada pra-ambil, jadi aplikasi sebenar lebih suka POST atau DELETE dengan pengesahan.
 
+## Di mana dalam kod
+
+- Laluan `delete_post` — `src/blog/presentation/features/posts/routes.py`
+- Kes guna `DeletePost` — `src/blog/application/use_cases/delete_post.py`
+- Pautan ✘ — `src/blog/presentation/features/posts/templates/index.html`
+
+Pautan ✘ pada senarai catatan memanggil laluan, yang menjalankan kes guna `DeletePost` dan bukannya menyentuh pangkalan data terus; id yang tidak dikenali memberi 404.
+
 ---
 
 Sebelumnya: [Simpan suntingan](Step-8-Save-Edit-ms)

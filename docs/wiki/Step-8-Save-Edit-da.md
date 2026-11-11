@@ -20,6 +20,13 @@
 - En redigering ændrer en eksisterende række, så der tilføjes intet nyt objekt.
 - Almindelige formularer begrænser til GET og POST; verbets hensigt (opdater) ses stadig i ruten og koden.
 
+## Hvor det er i koden
+
+- Rute `edit_post` (POST) — `src/blog/presentation/features/posts/routes.py`
+- Use case `UpdatePost` — `src/blog/application/use_cases/update_post.py`
+
+Use casen `UpdatePost` erstatter kun titel, undertitel, forfatter, billed-URL og indhold, så id'et og den oprindelige dato bevares; redigeringen sendes som POST og er beskyttet af CSRF.
+
 ---
 
 Forrige: [Forudfyldt formular](Step-7-Prefill-Form-da) · Næste: [Slet et indlæg](Step-9-Delete-Post-da)

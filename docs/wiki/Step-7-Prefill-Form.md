@@ -20,6 +20,12 @@
 - Passing existing values to the form is how an edit page starts from the current state.
 - Reusing the form class keeps create and edit consistent.
 
+## Where it is in the code
+
+- `PostForm.prefilled` — `src/blog/presentation/features/posts/post_form.py`
+
+`PostForm.prefilled` takes a view model of the stored post instead of the database row.
+
 ---
 
 Previous: [The edit route](Step-6-Edit-Route) · Next: [Save an edit](Step-8-Save-Edit)

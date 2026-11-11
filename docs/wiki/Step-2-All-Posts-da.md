@@ -20,6 +20,14 @@
 - Et SELECT af alle rækker giver Read i CRUD for en liste.
 - Skabelonen er ligeglad med, hvor data kom fra, bare rækkerne har de samme felter.
 
+## Hvor det er i koden
+
+- Rute `show_all_posts` — `src/blog/presentation/features/posts/routes.py`
+- Use case — `src/blog/application/use_cases/list_posts.py`
+- Skabelon — `src/blog/presentation/features/posts/templates/index.html`
+
+Ruten forespørger ikke selv databasen: den kalder use casen `ListPosts`, som læser gennem en repository-port, og skabelonen får rene view models.
+
 ---
 
 Forrige: [Startprojektet](Step-1-Starting-Project-da) · Næste: [Ét indlæg via dets id](Step-3-One-Post-da)

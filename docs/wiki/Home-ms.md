@@ -2,7 +2,18 @@
 
 # Hari 67: wiki blog RESTful
 
-Nota tentang Hari 67 kursus Udemy 100 Days of Code: blog dikembangkan supaya catatan datang daripada pangkalan data dan boleh dicipta, disunting dan dipadam di dalam laman web. Wiki ini menerangkan setiap langkah dan apa yang kita pelajari. Repositori ini tidak mengandungi kod aplikasi; kod itu milik kursus.
+Nota tentang Hari 67 kursus Udemy 100 Days of Code: blog dikembangkan supaya catatan datang daripada pangkalan data dan boleh dicipta, disunting dan dipadam di dalam laman web. Wiki ini menerangkan setiap langkah dan apa yang kita pelajari. Repositori ini mengandungi versi blog yang berfungsi di bawah `src/blog`. Jalankannya dengan `flask --app blog.presentation.app_factory:create_app run` selepas `flask --app blog.presentation.app_factory:create_app seed-db`; lihat README.
+
+## Kod
+
+Kod di bawah `src/blog` dibahagi kepada lapisan, dan setiap lapisan hanya bergantung pada lapisan di dalamnya:
+
+- **domain**: entiti catatan, peraturan pengesahan, ralat dan port repositori.
+- **application**: kes guna (senarai, dapatkan, cipta, kemas kini, padam) dan data yang diterimanya.
+- **infrastructure**: penyimpanan SQLAlchemy, repositori, tetapan dan catatan contoh.
+- **presentation**: kilang aplikasi Flask, laluan, borang dan templat.
+
+Setiap halaman langkah di bawah berakhir dengan lokasi kodnya.
 
 ## CRUD dan kata kerja HTTP
 

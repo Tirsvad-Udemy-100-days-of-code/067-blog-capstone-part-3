@@ -21,6 +21,14 @@
 - Projek lebih mudah difahami apabila kita mula-mula melihat fail dan datanya.
 - Pangkalan data menggantikan JSON bin jauh: satu fail setempat dengan medan yang sama.
 
+## Di mana dalam kod
+
+- Kilang aplikasi — `src/blog/presentation/app_factory.py` (`create_app`, `seed-db`)
+- Model — `src/blog/infrastructure/persistence/blog_post_model.py`
+- Catatan contoh — `src/blog/infrastructure/seed.py`
+
+Berbeza daripada pelajaran, tiada `posts.db` yang dimuat turun: arahan `seed-db` mengisi pangkalan data baharu dengan catatan contoh, dan aplikasi dibina oleh `create_app`.
+
 ---
 
 Sebelumnya: [Utama](Home-ms) · Seterusnya: [Semua catatan daripada pangkalan data](Step-2-All-Posts-ms)

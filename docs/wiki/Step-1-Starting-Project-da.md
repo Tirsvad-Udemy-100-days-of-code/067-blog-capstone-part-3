@@ -21,6 +21,14 @@
 - Et projekt er lettere at forstå, når man først ser på dets filer og data.
 - En database erstatter en ekstern JSON-bin: én lokal fil med de samme felter.
 
+## Hvor det er i koden
+
+- App-fabrik — `src/blog/presentation/app_factory.py` (`create_app`, `seed-db`)
+- Model — `src/blog/infrastructure/persistence/blog_post_model.py`
+- Eksempelindlæg — `src/blog/infrastructure/seed.py`
+
+I modsætning til lektionen er der ingen downloadet `posts.db`: kommandoen `seed-db` fylder en ny database med eksempelindlæg, og appen bygges af `create_app`.
+
 ---
 
 Forrige: [Hjem](Home-da) · Næste: [Alle indlæg fra databasen](Step-2-All-Posts-da)

@@ -20,6 +20,14 @@
 - Sletning kræver id og commit, som de andre skriveoperationer.
 - Et sletningslink ændrer data med GET; det er enkelt, men ikke sikkert mod forhåndshentning, så rigtige programmer foretrækker POST eller DELETE med bekræftelse.
 
+## Hvor det er i koden
+
+- Rute `delete_post` — `src/blog/presentation/features/posts/routes.py`
+- Use case `DeletePost` — `src/blog/application/use_cases/delete_post.py`
+- Link ✘ — `src/blog/presentation/features/posts/templates/index.html`
+
+Linket ✘ på indlægslisten kalder ruten, som kører use casen `DeletePost` i stedet for at røre databasen direkte; et ukendt id giver en 404.
+
 ---
 
 Forrige: [Gem en redigering](Step-8-Save-Edit-da)

@@ -21,6 +21,14 @@
 - A form class describes the fields once; the template renders it.
 - A rich text field produces HTML, so the body is stored as markup, not plain text.
 
+## Where it is in the code
+
+- Form `PostForm` — `src/blog/presentation/features/posts/post_form.py`
+- Route `add_new_post` (GET) — `src/blog/presentation/features/posts/routes.py`
+- Template — `src/blog/presentation/features/posts/templates/make-post.html`
+
+The form is the same `PostForm` for creating and editing, and CSRF protection is on, so every form carries a token.
+
 ---
 
 Previous: [One post by its id](Step-3-One-Post) · Next: [Save a new post](Step-5-Save-New-Post)

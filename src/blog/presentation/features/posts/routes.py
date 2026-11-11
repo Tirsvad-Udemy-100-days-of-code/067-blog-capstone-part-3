@@ -8,6 +8,7 @@ from blog.domain.errors.invalid_post_error import InvalidPostError
 from blog.domain.errors.post_not_found_error import PostNotFoundError
 from blog.presentation.composition_root import (
     build_create_post,
+    build_delete_post,
     build_get_post,
     build_list_posts,
     build_update_post,
@@ -63,6 +64,19 @@ def edit_post(post_id: int) -> str | Response:
         else:
             return redirect(url_for("posts.show_post", post_id=post_id))
     return render_template("make-post.html", form=form, heading=EDIT_POST_HEADING)
+
+
+# A state-changing GET is not safe: a browser or proxy that prefetches links, or
+# a crawler, can delete posts by following them. The course uses a link, so this
+# does too; a real application prefers POST or DELETE with a confirmation.
+@posts_blueprint.get("/delete/<int:post_id>")
+def delete_post(post_id: int) -> Response:
+    """Delete the post and go back to the list; answer 404 for an unknown id."""
+    try:
+        build_delete_post().execute(post_id)
+    except PostNotFoundError:
+        abort(HTTP_NOT_FOUND)
+    return redirect(url_for("posts.show_all_posts"))
 
 
 def _load_post_or_404(post_id: int) -> PostViewModel:
