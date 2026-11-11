@@ -11,14 +11,14 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [58e2942] |
-| 2026-11-10 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-001; autonomous, not independent | [58e2942] |
+| 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-001; autonomous, not independent | [58e2942] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | Scope now includes the working Day 67 blog application (G4 to G6), runtime dependencies and end date 2026-11-18; Go on RC-009, supervised | [bb4ab74] |
 
 ---
 
 ## Executive Summary
 
-This project documents the learning outcome of Day 67 of the Udemy course "100 Days of Code: The Complete Python Pro Bootcamp", the lecture "Building a RESTful Blog with Editing" (a Flask blog that can read, create, edit and delete posts). The deliverable is documentation only: a README and a trilingual wiki (English, Danish, Bahasa Malaysia) that walk through each lecture step with a screenshot and explain what was learned. No application code is written. The repository is published on the Tirsystem Gitea host so that fellow course participants and GitHub viewers can read it.
+This project documents the learning outcome of Day 67 of the Udemy course "100 Days of Code: The Complete Python Pro Bootcamp", the lecture "Building a RESTful Blog with Editing" (a Flask blog that can read, create, edit and delete posts). The deliverables are a README and a trilingual wiki (English, Danish, Bahasa Malaysia) that walk through each lecture step with a screenshot and explain what was learned, and, from revision 2, the working blog application itself, written by S01 in layers under `src/` with pytest tests under `tests/`. The repository is published on the Tirsystem Gitea host so that fellow course participants and GitHub viewers can read it.
 
 ## Methodological and Standards Foundation
 
@@ -41,22 +41,24 @@ A clear, illustrated walk-through of the lecture steps lets S01 consolidate the 
 2. Document each Day 67 lecture step (starting project, all posts, one post, the new-post form, saving a new post, the edit route, the pre-populated form, saving an edit, deleting a post) in the README with one screenshot per step.
 3. Publish a wiki in English, Danish and Bahasa Malaysia with the same page set, each page explaining what was gained in that step.
 4. Document how to create and use a local `.venv` and run `python -m pip install --upgrade pip`, and how to run the project and its tests.
-5. Keep the repository free of runtime dependencies and scan it with opengrep before each push.
+5. Scan the repository with opengrep before each push.
+6. Build the Day 67 blog application (read, create, edit and delete posts) in `src/`, in layers that keep the business rules independent of Flask, with pytest tests for every route and use case.
+7. Keep the README and the wiki consistent with the code: each wiki step page names the file that implements it.
 
 ## Scope
 
 ### In Scope
 
-- Repository setup: description, topics, Python `.gitignore`, `pyproject.toml` (Python 3.13 or newer, pytest configuration, no runtime dependencies), `Doxyfile`, and the folders `docs/`, `src/` and `tests/` as the layout the project uses.
+- Repository setup: description, topics, Python `.gitignore`, `pyproject.toml` (Python 3.13 or newer, pytest configuration, and the runtime dependencies of the app: Flask, Flask-SQLAlchemy, Flask-WTF, Flask-CKEditor and Bootstrap-Flask), `Doxyfile`, and the folders `docs/`, `src/` and `tests/` as the layout the project uses.
 - README from the framework template with the lecture steps, screenshots, venv instructions and run and test instructions.
 - Wiki pages in English, Danish and Bahasa Malaysia, one page per lecture step.
 - A screenshot for each lecture step in the README and the wiki.
 - A local opengrep scan before each push; the AI prompt log under `docs/ai-prompts/`.
+- The blog application: domain, application, infrastructure and presentation layers under `src/`, a SQLite database seeded with example posts, the routes `/`, `/post/<post_id>`, `/new-post`, `/edit-post/<post_id>` and `/delete/<post_id>`, and `pytest` tests (added in G4 to G6).
 
 ### Out of Scope
 
-- Any Python source code, tests or `constants.py` (the Product Owner asked for README and wiki only). The coding rules (pytest, Doxygen comments, `constants.py`) apply the day code is added.
-- Hosting or running the blog, and any copy of the course starting archive or of the course solutions.
+- Hosting the blog on a public server, user accounts and login (later lecture days), and any copy of the course starting archive or of the course solutions; the code is written for this repository.
 - Secrets: `.env` holds personal tokens and is never read into the project, tested or committed.
 
 ## Expected Benefits
@@ -84,14 +86,16 @@ The repository belongs to the Tirsvad Udemy 100 Days of Code collection, one rep
 | 3 | Wiki languages | 3 (en, da, ms) with identical page sets | Page list comparison |
 | 4 | Repository metadata | Description set and at least 5 topics | Gitea API response |
 | 5 | Security scan | 0 findings of High or Critical severity | opengrep output before each push |
-| 6 | Runtime dependencies | 0 | Empty `dependencies` list in `pyproject.toml` |
+| 6 | Runtime dependencies | Only the five named in scope | `dependencies` list in `pyproject.toml` |
 | 7 | Reviews | 100 percent of artifacts have an `RC-*` verdict | Files in `docs/sqa/reviews/` |
+| 8 | Application routes | 5 of 5 work | Route tests pass in `python -m pytest` |
+| 9 | Code review | Every code milestone has a `Go` against its `qc-programming-*` checklist | Files in `docs/sqa/reviews/` |
 
 ## Risks
 
 | Risk | Impact | Mitigation |
 | --- | --- | --- |
-| Screenshots of lecture steps cannot be captured, because no code is written and the course project is not part of this repository | Objective 2 not met | Draw illustrations with example data from the lecture description, label each as an illustration, record the source of each, and ask S01 to confirm this at plan acceptance |
+| Screenshots of lecture steps are illustrations until S01 supplies captures of the running app | Objective 2 not met | Draw illustrations with example data from the lecture description, label each as an illustration, record the source of each, and ask S01 to confirm this at plan acceptance |
 | The lecture material is copyrighted by the course author | Legal exposure | Summarise in own words, never reproduce solution code or the starting archive |
 | Danish or Bahasa Malaysia text is machine quality | Misleading translation | English is authoritative; S01 reviews the languages S01 reads; Bahasa Malaysia is flagged as not reviewed by a native speaker |
 | A token leaks into the repository | Account compromise | `.env` is in `.gitignore`, is never opened by project tooling, and an opengrep scan runs before each push |
@@ -106,11 +110,11 @@ The repository belongs to the Tirsvad Udemy 100 Days of Code collection, one rep
 
 ## Constraints
 
-- Python 3.13 or newer, `venv`, `pytest`, `pyproject.toml`; no runtime dependencies unless needed.
+- Python 3.13 or newer, `venv`, `pytest`, `pyproject.toml`; runtime dependencies only the five named in scope.
 - Folder structure `src/`, `tests/`, `docs/`.
-- Documentation only; no programming.
+- Application code is written layer by layer with tests; the code follows `coding-conventions` and `clean-architecture`.
 - One branch and one pull request per milestone.
-- Duration: 2026-11-10 to 2026-11-17 (one week).
+- Duration: 2026-11-10 to 2026-11-18 (extended from 2026-11-17 for the application milestones G4 to G6).
 
 ## Cost–Benefit Assessment
 
@@ -130,9 +134,10 @@ A qualitative assessment is justified: the project is a personal learning record
 
 ## Recommendation
 
-Proceed — the scope is small, documentation-only and fits the one-week constraint.
+Proceed — G1 to G3 delivered the documentation; the application is three further small gateways (G4 to G6) that end on 2026-11-18.
 
 ---
 
 [SA-001]: ./stakeholder-analysis.md
 [58e2942]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/58e2942815801ad36122a1209bcbede2614a07e3
+[bb4ab74]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/bb4ab74b3e8d54bf96382b87bba9c277df4c8b09
