@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-10 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-001; autonomous, not independent | [58e2942] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | Scope now includes the working Day 67 blog application (G4 to G6), runtime dependencies and end date 2026-11-18; Go on RC-009, supervised | [bb4ab74] |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S01 | Scope now includes the working Day 67 blog application (G4 to G6), runtime dependencies and end date 2026-11-18; Go on RC-009, supervised | [bb4ab74] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | Risk 1 and the end date updated for G7 (real screenshots, end date 2026-11-19); Go on RC-020, supervised | pending |
 
 ---
 
@@ -95,7 +95,7 @@ The repository belongs to the Tirsvad Udemy 100 Days of Code collection, one rep
 
 | Risk | Impact | Mitigation |
 | --- | --- | --- |
-| Screenshots of lecture steps are illustrations until S01 supplies captures of the running app | Objective 2 not met | Draw illustrations with example data from the lecture description, label each as an illustration, record the source of each, and ask S01 to confirm this at plan acceptance |
+| Screenshots of lecture steps are illustrations, not captures of the running app | Objective 2 met only in part | G7 captures the nine screens from the running app in a Docker container with a headless browser and replaces the illustrations; until G7 is merged the illustrations stay, labelled as such |
 | The lecture material is copyrighted by the course author | Legal exposure | Summarise in own words, never reproduce solution code or the starting archive |
 | Danish or Bahasa Malaysia text is machine quality | Misleading translation | English is authoritative; S01 reviews the languages S01 reads; Bahasa Malaysia is flagged as not reviewed by a native speaker |
 | A token leaks into the repository | Account compromise | `.env` is in `.gitignore`, is never opened by project tooling, and an opengrep scan runs before each push |
@@ -114,7 +114,7 @@ The repository belongs to the Tirsvad Udemy 100 Days of Code collection, one rep
 - Folder structure `src/`, `tests/`, `docs/`.
 - Application code is written layer by layer with tests; the code follows `coding-conventions` and `clean-architecture`.
 - One branch and one pull request per milestone.
-- Duration: 2026-11-10 to 2026-11-18 (extended from 2026-11-17 for the application milestones G4 to G6).
+- Duration: 2026-11-10 to 2026-11-19 (extended from 2026-11-17 for the application milestones G4 to G6, and to 2026-11-19 for the screenshot milestone G7).
 
 ## Cost–Benefit Assessment
 
