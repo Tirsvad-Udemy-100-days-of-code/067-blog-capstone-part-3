@@ -20,6 +20,13 @@
 - Satu templat boleh melakukan dua tugas apabila bendera mengubah teks.
 - Nama laluan dan id dalam URL menunjukkan apa yang disunting.
 
+## Di mana dalam kod
+
+- Laluan `edit_post` — `src/blog/presentation/features/posts/routes.py`
+- Templat — `src/blog/presentation/features/posts/templates/make-post.html` ("Edit Post")
+
+Satu fungsi laluan mengendalikan GET dan POST serta menghantar tajuk "Edit Post" kepada templat yang dikongsi.
+
 ---
 
 Sebelumnya: [Simpan catatan baharu](Step-5-Save-New-Post-ms) · Seterusnya: [Borang yang telah diisi](Step-7-Prefill-Form-ms)

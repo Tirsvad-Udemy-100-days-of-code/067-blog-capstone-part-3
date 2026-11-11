@@ -20,6 +20,14 @@
 - En værdi i URL'en (en stiparameter) udpeger én ressource.
 - At hente på primærnøgle er den normale måde at læse én række på.
 
+## Hvor det er i koden
+
+- Rute `show_post` — `src/blog/presentation/features/posts/routes.py`
+- Use case — `src/blog/application/use_cases/get_post.py`
+- Skabelon — `src/blog/presentation/features/posts/templates/post.html`
+
+Ruten kalder use casen `GetPost`; et ukendt id giver `PostNotFoundError`, som ruten gør til en 404-side.
+
 ---
 
 Forrige: [Alle indlæg fra databasen](Step-2-All-Posts-da) · Næste: [Formularen til nyt indlæg](Step-4-New-Post-Form-da)

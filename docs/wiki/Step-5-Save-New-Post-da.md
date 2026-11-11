@@ -22,6 +22,14 @@
 - Omdirigering efter POST undgår dobbelt indsendelse ved genindlæsning.
 - `safe` er kun forsvarligt, når forfatterne er til at stole på; ikke-renset HTML kan indeholde et script.
 
+## Hvor det er i koden
+
+- Rute `add_new_post` (POST) — `src/blog/presentation/features/posts/routes.py`
+- Use case — `src/blog/application/use_cases/create_post.py`
+- Validering — `src/blog/domain/rules/post_validation.py`
+
+Use casen `CreatePost` sætter datoen som en rigtig `date` (i dag), validerer indholdet med en domæneregel, og siden viser den som "Month DD, YYYY".
+
 ---
 
 Forrige: [Formularen til nyt indlæg](Step-4-New-Post-Form-da) · Næste: [Redigeringsruten](Step-6-Edit-Route-da)

@@ -20,6 +20,13 @@
 - One template can serve two jobs when a flag changes the text.
 - The route name and the id in the URL say what is edited.
 
+## Where it is in the code
+
+- Route `edit_post` — `src/blog/presentation/features/posts/routes.py`
+- Template — `src/blog/presentation/features/posts/templates/make-post.html` ("Edit Post")
+
+One route function handles both GET and POST, and passes the heading "Edit Post" to the shared template.
+
 ---
 
 Previous: [Save a new post](Step-5-Save-New-Post) · Next: [Pre-populated form](Step-7-Prefill-Form)

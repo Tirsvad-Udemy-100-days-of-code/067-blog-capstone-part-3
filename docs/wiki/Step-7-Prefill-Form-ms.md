@@ -20,6 +20,12 @@
 - Memberi nilai sedia ada kepada borang ialah cara halaman sunting bermula daripada keadaan semasa.
 - Menggunakan semula kelas borang memastikan cipta dan sunting selaras.
 
+## Di mana dalam kod
+
+- `PostForm.prefilled` — `src/blog/presentation/features/posts/post_form.py`
+
+`PostForm.prefilled` menerima view model catatan yang disimpan, bukan baris pangkalan data.
+
 ---
 
 Sebelumnya: [Laluan sunting](Step-6-Edit-Route-ms) · Seterusnya: [Simpan suntingan](Step-8-Save-Edit-ms)

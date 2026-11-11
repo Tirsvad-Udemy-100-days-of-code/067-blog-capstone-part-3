@@ -73,3 +73,12 @@ class SqlAlchemyBlogPostRepository:
         updated = _to_entity(model)
         self._session.commit()
         return updated
+
+    def delete(self, post_id: int) -> bool:
+        """Remove the post with ``post_id``; say whether there was one."""
+        model = self._session.get(BlogPostModel, post_id)
+        if model is None:
+            return False
+        self._session.delete(model)
+        self._session.commit()
+        return True

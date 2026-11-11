@@ -2,7 +2,18 @@
 
 # Day 67: RESTful blog wiki
 
-Notes on Day 67 of the Udemy course 100 Days of Code: taking the blog further so that posts come from a database and can be created, edited and deleted inside the website. This wiki explains each step and what we gained from it. The repository holds no application code; the code belongs to the course.
+Notes on Day 67 of the Udemy course 100 Days of Code: taking the blog further so that posts come from a database and can be created, edited and deleted inside the website. This wiki explains each step and what we gained from it. The repository holds a working version of the blog under `src/blog`. Run it with `flask --app blog.presentation.app_factory:create_app run` after `flask --app blog.presentation.app_factory:create_app seed-db`; see the README.
+
+## The code
+
+The code under `src/blog` is layered, and each layer only depends on the ones inside it:
+
+- **domain**: the post entity, the validation rule, the errors and the repository port.
+- **application**: the use cases (list, get, create, update, delete) and the data they take.
+- **infrastructure**: SQLAlchemy persistence, the repository, the settings and the example posts.
+- **presentation**: the Flask app factory, routes, forms and templates.
+
+Each step page below ends with where its code is.
 
 ## CRUD and the HTTP verbs
 

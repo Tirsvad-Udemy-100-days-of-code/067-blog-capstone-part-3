@@ -21,6 +21,14 @@
 - Kelas borang menerangkan medan sekali sahaja; templat memaparkannya.
 - Medan teks kaya menghasilkan HTML, jadi kandungan disimpan sebagai markup dan bukan teks biasa.
 
+## Di mana dalam kod
+
+- Borang `PostForm` — `src/blog/presentation/features/posts/post_form.py`
+- Laluan `add_new_post` (GET) — `src/blog/presentation/features/posts/routes.py`
+- Templat — `src/blog/presentation/features/posts/templates/make-post.html`
+
+Borang ialah `PostForm` yang sama untuk mencipta dan menyunting, dan perlindungan CSRF dihidupkan, jadi setiap borang membawa token.
+
 ---
 
 Sebelumnya: [Satu catatan mengikut id](Step-3-One-Post-ms) · Seterusnya: [Simpan catatan baharu](Step-5-Save-New-Post-ms)

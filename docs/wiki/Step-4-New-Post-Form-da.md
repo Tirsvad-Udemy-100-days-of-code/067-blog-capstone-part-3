@@ -21,6 +21,14 @@
 - En formularklasse beskriver felterne én gang; skabelonen tegner den.
 - Et rich text-felt giver HTML, så indholdet gemmes som markup og ikke som ren tekst.
 
+## Hvor det er i koden
+
+- Formular `PostForm` — `src/blog/presentation/features/posts/post_form.py`
+- Rute `add_new_post` (GET) — `src/blog/presentation/features/posts/routes.py`
+- Skabelon — `src/blog/presentation/features/posts/templates/make-post.html`
+
+Formularen er den samme `PostForm` til oprettelse og redigering, og CSRF-beskyttelse er slået til, så hver formular har et token.
+
 ---
 
 Forrige: [Ét indlæg via dets id](Step-3-One-Post-da) · Næste: [Gem et nyt indlæg](Step-5-Save-New-Post-da)

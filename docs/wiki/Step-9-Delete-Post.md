@@ -20,6 +20,14 @@
 - Delete needs the id and a commit, like the other write operations.
 - A delete link changes data with GET; it is simple but not safe against prefetching, so real applications prefer POST or DELETE with a confirmation.
 
+## Where it is in the code
+
+- Route `delete_post` — `src/blog/presentation/features/posts/routes.py`
+- Use case `DeletePost` — `src/blog/application/use_cases/delete_post.py`
+- Link ✘ — `src/blog/presentation/features/posts/templates/index.html`
+
+The ✘ link on the post list calls the route, which runs the `DeletePost` use case instead of touching the database directly; an unknown id gives a 404.
+
 ---
 
 Previous: [Save an edit](Step-8-Save-Edit)

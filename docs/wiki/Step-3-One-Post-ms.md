@@ -20,6 +20,14 @@
 - Nilai dalam URL (parameter laluan) memilih satu sumber.
 - Mengambil mengikut kunci utama ialah cara biasa membaca satu baris.
 
+## Di mana dalam kod
+
+- Laluan `show_post` — `src/blog/presentation/features/posts/routes.py`
+- Kes guna — `src/blog/application/use_cases/get_post.py`
+- Templat — `src/blog/presentation/features/posts/templates/post.html`
+
+Laluan memanggil kes guna `GetPost`; id yang tidak dikenali menimbulkan `PostNotFoundError`, yang ditukar oleh laluan kepada halaman 404.
+
 ---
 
 Sebelumnya: [Semua catatan daripada pangkalan data](Step-2-All-Posts-ms) · Seterusnya: [Borang catatan baharu](Step-4-New-Post-Form-ms)

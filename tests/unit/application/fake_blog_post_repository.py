@@ -28,3 +28,6 @@ class FakeBlogPostRepository:
             return None
         self._posts[post.post_id] = post
         return post
+
+    def delete(self, post_id: int) -> bool:
+        return self._posts.pop(post_id, None) is not None

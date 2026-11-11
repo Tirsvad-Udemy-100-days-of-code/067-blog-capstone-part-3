@@ -77,6 +77,26 @@ def test_update_returns_none_when_id_is_unknown(
     assert repository.list_all() == []
 
 
+def test_delete_removes_the_post_and_returns_true(
+    repository: SqlAlchemyBlogPostRepository,
+) -> None:
+    repository.add(make_post())
+    repository.add(make_post())
+
+    assert repository.delete(1) is True
+    assert repository.find_by_id(1) is None
+    assert [post.post_id for post in repository.list_all()] == [2]
+
+
+def test_delete_returns_false_when_id_is_unknown(
+    repository: SqlAlchemyBlogPostRepository,
+) -> None:
+    repository.add(make_post())
+
+    assert repository.delete(99) is False
+    assert len(repository.list_all()) == 1
+
+
 def test_update_returns_none_for_post_without_id(
     repository: SqlAlchemyBlogPostRepository,
 ) -> None:

@@ -20,6 +20,13 @@
 - Suntingan mengubah baris sedia ada, jadi tiada objek baharu ditambah.
 - Borang biasa menghadkan kepada GET dan POST; niat kata kerja (kemas kini) masih kelihatan dalam laluan dan kod.
 
+## Di mana dalam kod
+
+- Laluan `edit_post` (POST) — `src/blog/presentation/features/posts/routes.py`
+- Kes guna `UpdatePost` — `src/blog/application/use_cases/update_post.py`
+
+Kes guna `UpdatePost` hanya menggantikan tajuk, subtajuk, pengarang, URL imej dan kandungan, jadi id dan tarikh asal kekal; suntingan dihantar sebagai POST dan dilindungi CSRF.
+
 ---
 
 Sebelumnya: [Borang yang telah diisi](Step-7-Prefill-Form-ms) · Seterusnya: [Padam catatan](Step-9-Delete-Post-ms)

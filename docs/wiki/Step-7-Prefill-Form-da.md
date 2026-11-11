@@ -20,6 +20,12 @@
 - At give formularen de eksisterende værdier er måden, en redigeringsside starter fra den nuværende tilstand.
 - Genbrug af formularklassen holder oprettelse og redigering ens.
 
+## Hvor det er i koden
+
+- `PostForm.prefilled` — `src/blog/presentation/features/posts/post_form.py`
+
+`PostForm.prefilled` tager en view model af det gemte indlæg i stedet for databaserækken.
+
 ---
 
 Forrige: [Redigeringsruten](Step-6-Edit-Route-da) · Næste: [Gem en redigering](Step-8-Save-Edit-da)
