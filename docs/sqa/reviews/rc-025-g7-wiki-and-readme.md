@@ -10,6 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [62bc053] |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Criterion 14 confirmed on the published wiki; verdict Go | pending |
 
 ---
 
@@ -46,19 +47,18 @@
 | 11 | Language line on every page | Pass | Unchanged. |
 | 12 | Page naming | Pass | Unchanged. |
 | 13 | Code, commands, file names and IDs stay in English | Pass | The new disclaimer text is prose; names are unchanged. |
-| 14 | Checked on the published wiki after the change | Pending | Checked after the merge, as in [RC-019]. The images load from the `main` branch, so they appear only after the merge. |
+| 14 | Checked on the published wiki after the change | Pass | Checked on the published wiki on 2026-11-11 after PR 56 merged: all 30 pages return 200; the step 1 pages in en, da and ms carry the new screenshot disclaimer and show `step-1.png`; all nine images return 200 from the `main` branch. |
 | 15 | Layout rule changes made in the generator | N-A | Optional; no layout rule changed. |
 | 16 | Wiki folder is flat | Pass | Unchanged. |
 
 ## Overall Verdict
 
-Go, with one condition: criterion 14 (published wiki) stays pending until after the merge. Every other criterion passes. The Danish and Bahasa Malaysia disclaimer sentences were written by the AI and have not been read by a native speaker. This is the AI's verdict in supervised mode. S01's go-ahead ("Yes, all of it") was given before the images existed, so S01 confirms by viewing the screenshots and the script in the pull request.
+Go — every criterion passes; criterion 14 was confirmed on the published wiki after the merge (delta check, criterion 14 only). The Danish and Bahasa Malaysia disclaimer sentences were written by the AI and have not been read by a native speaker. This is the AI's verdict in supervised mode. S01's go-ahead ("Yes, all of it") was given before the images existed, so S01 confirms by viewing the screenshots and the script in the pull request.
 
 ## Action Items
 
 | Action | Owner | Due |
 | --- | --- | --- |
-| After the merge, check the pages and the nine images on the published wiki and close criterion 14 | S01 | 2026-11-19 |
 | Read the new Danish and Bahasa Malaysia disclaimer sentences | S01 | 2026-11-19 |
 
 ---
