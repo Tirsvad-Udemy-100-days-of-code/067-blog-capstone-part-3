@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [bb4ab74] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | Accepted on a Go review, RC-015; supervised, S01 accepted in chat | pending |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | Accepted on a Go review, RC-015; supervised, S01 accepted in chat | [3a93e6e] |
 
 ---
 
@@ -77,3 +77,4 @@ The `/delete/<post_id>` route and use case with tests, a README Run section that
 [US-001]: ../user-stories.md
 [MIL-005]: ./mil-005-create-and-edit-posts.md
 [bb4ab74]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/bb4ab74b3e8d54bf96382b87bba9c277df4c8b09
+[3a93e6e]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/3a93e6e214b76dd96767afa669d649c23225b5f6

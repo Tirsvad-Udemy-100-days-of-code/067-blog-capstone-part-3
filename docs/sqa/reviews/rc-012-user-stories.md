@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [3a93e6e] |
 
 ---
 
@@ -66,3 +66,4 @@ Go — every Mandatory criterion passes; criterion 7 is N/A (no Use Case Diagram
 [US-001]: ../../user-stories.md
 [QC-US-001]: ../../../framework/qc/artifacts/qc-user-story.md
 [QC-LANG-001]: ../../../framework/qc/artifacts/qc-language-domain.md
+[3a93e6e]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/3a93e6e214b76dd96767afa669d649c23225b5f6
