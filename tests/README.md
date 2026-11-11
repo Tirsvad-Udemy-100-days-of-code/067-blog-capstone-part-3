@@ -1,5 +1,5 @@
 # tests
 
-Reserved for the `pytest` tests of the code in `src/`. There is no code yet, so there are no tests.
+`pytest` tests of the code in `src/`: `unit/` for the domain and the use cases (with a fake repository, no framework) and `integration/` for the repository and the routes (in-memory SQLite, the Flask test client).
 
-Run `python -m pytest` from the repository root; with no tests it reports "no tests ran" (exit code 5).
+Run `python -m pytest` from the repository root.

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  {% for post in posts %}
+    <article class="mb-4">
+      <h2><a href="{{ url_for('posts.show_post', post_id=post.post_id) }}">{{ post.title }}</a></h2>
+      <p class="lead">{{ post.subtitle }}</p>
+      <p class="text-muted">Posted by {{ post.author }} on {{ post.posted_on_text }}</p>
+    </article>
+  {% else %}
+    <p>There are no posts yet.</p>
+  {% endfor %}
+{% endblock %}

@@ -1,13 +1,59 @@
 [project]
 name = "restful-blog-day-67"
-version = "0.1.0"
-description = "Udemy 100 Days of Code, Day 67: documentation of the RESTful blog with editing lecture."
+version = "0.2.0"
+description = "Udemy 100 Days of Code, Day 67: a RESTful blog with editing, and the documentation of the lecture."
 readme = "README.md"
 requires-python = ">=3.13"
-license = { file = "LICENSE" }
-# No runtime dependencies: this repository documents the lecture and holds no application code.
-dependencies = []
+license-files = ["LICENSE"]
+# Runtime dependencies of the blog application (see the Business Case, scope).
+# Flask-WTF and Flask-CKEditor are used from G5 (the post form).
+dependencies = [
+    "Flask>=3.1,<4",
+    "Flask-SQLAlchemy>=3.1,<4",
+    "Flask-WTF>=1.3,<2",
+    "Flask-CKEditor>=1.0,<2",
+    "Bootstrap-Flask>=2.6,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9,<10",
+    "ruff>=0.17,<1",
+    "mypy>=2.4,<3",
+]
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+blog = ["presentation/**/*.html"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "D"]
+ignore = ["D203", "D213"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D"]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+mypy_path = "src"
+
+# Bootstrap-Flask ships no type information.
+[[tool.mypy.overrides]]
+module = ["flask_bootstrap", "flask_bootstrap.*"]
+ignore_missing_imports = true

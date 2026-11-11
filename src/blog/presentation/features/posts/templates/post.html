@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} - {{ APP_TITLE }}{% endblock %}
+{% block content %}
+  <article>
+    <h1>{{ post.title }}</h1>
+    <p class="lead">{{ post.subtitle }}</p>
+    <p class="text-muted">Posted by {{ post.author }} on {{ post.posted_on_text }}</p>
+    <img class="img-fluid mb-3" src="{{ post.img_url }}" alt="">
+    {# body_html is trusted HTML written by the blog author #}
+    <div>{{ post.body_html | safe }}</div>
+  </article>
+{% endblock %}

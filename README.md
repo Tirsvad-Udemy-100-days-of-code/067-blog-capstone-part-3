@@ -20,13 +20,13 @@ Notes and screenshots for Day 67 of Udemy's "100 Days of Code: The Complete Pyth
 
 The Day 67 lecture takes the blog further: the posts come from a SQLite database (`posts.db`) through Flask-SQLAlchemy, and you can read, create, edit and delete posts inside the website, with WTForms and a CKEditor field for the post body.
 
-This repository documents what the lecture teaches. It holds **no application code**; the code belongs to the course. The lecture steps with screenshots are below, and the wiki explains what each step teaches, in English, Danish and Bahasa Malaysia.
+This repository documents what the lecture teaches and holds a working version of the blog, written for this repository (not the course code). The blog is built in layers under `src/`; read and delete are added step by step as the project milestones G4 to G6 land, and the read routes `/` and `/post/<post_id>` work today. The lecture steps with screenshots are below, and the wiki explains what each step teaches, in English, Danish and Bahasa Malaysia.
 
 | Part | Purpose |
 | --- | --- |
 | `docs/` | Project documents, the wiki source (`docs/wiki/`) and screenshots |
-| `src/` | Reserved for source code (empty) |
-| `tests/` | Reserved for `pytest` tests (empty) |
+| `src/blog/` | The blog application: `domain`, `application`, `infrastructure` and `presentation` layers |
+| `tests/` | `pytest` tests: `unit` and `integration` |
 | `framework/` | The SQA and QC framework the project follows |
 
 ## 🎓 Lecture steps
@@ -93,7 +93,7 @@ A ✘ link calls `/delete/<post_id>`, which deletes the post and redirects home.
 - `git`, to clone the repository.
 - Optional: [Doxygen][doxygen], to build the source documentation from the `Doxyfile`.
 
-There are no runtime dependencies.
+Runtime dependencies (installed with the project): Flask, Flask-SQLAlchemy, Flask-WTF, Flask-CKEditor and Bootstrap-Flask. Development tools: `pytest`, `ruff` and `mypy`.
 
 ## 🛠️ Setup
 
@@ -105,7 +105,7 @@ Windows (PowerShell):
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install pytest
+python -m pip install -e ".[dev]"
 ```
 
 macOS and Linux:
@@ -114,14 +114,21 @@ macOS and Linux:
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install pytest
+python -m pip install -e ".[dev]"
 ```
 
 Leave the environment with `deactivate`. The `.venv` folder is ignored by git.
 
 ## ▶️ Run
 
-There is nothing to run: the repository documents the lecture. Read the [wiki][wiki] or the lecture steps in this README. To build the (currently empty) source documentation:
+With the environment active, fill the database with three example posts and start the blog:
+
+```bash
+flask --app blog.presentation.app_factory:create_app seed-db
+flask --app blog.presentation.app_factory:create_app run
+```
+
+Open <http://127.0.0.1:5000/> to see all posts and click a title to read one. The database file `posts.db` is created in Flask's `instance` folder (`src/instance/`); set `BLOG_DATABASE_URI` to use another one. To build the source documentation:
 
 ```bash
 doxygen Doxyfile
@@ -135,7 +142,13 @@ With the environment active:
 python -m pytest
 ```
 
-There is no code yet, so pytest reports "no tests ran" (exit code 5).
+The tests use an in-memory SQLite database and need no network. To check style and types as well:
+
+```bash
+python -m ruff check src tests
+python -m ruff format --check src tests
+python -m mypy --strict src
+```
 
 ## 📄 License
 
