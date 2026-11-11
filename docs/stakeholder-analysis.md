@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-10 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-002; autonomous, not independent | [58e2942] |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | CN-005 allows the app's runtime dependencies; communication rows cover MIL-004 to MIL-006 | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | CN-005 allows the app's runtime dependencies; communication rows cover MIL-004 to MIL-006 | [bb4ab74] |
 
 ---
 
@@ -81,3 +81,4 @@ Pending S01.
 
 [BC-001]: ./business-case.md
 [58e2942]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/58e2942815801ad36122a1209bcbede2614a07e3
+[bb4ab74]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/bb4ab74b3e8d54bf96382b87bba9c277df4c8b09

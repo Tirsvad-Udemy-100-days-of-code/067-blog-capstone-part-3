@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [bb4ab74] |
 
 ---
 
@@ -92,3 +92,4 @@ All five stories are Independent once the database exists ([MIL-004]), Negotiabl
 [MIL-004]: ./milestones/mil-004-application-core-and-read.md
 [MIL-005]: ./milestones/mil-005-create-and-edit-posts.md
 [MIL-006]: ./milestones/mil-006-delete-and-documentation-sync.md
+[bb4ab74]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/bb4ab74b3e8d54bf96382b87bba9c277df4c8b09

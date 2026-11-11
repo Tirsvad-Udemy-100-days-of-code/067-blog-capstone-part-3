@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [bb4ab74] |
 
 ---
 
@@ -75,3 +75,4 @@ The `/delete/<post_id>` route and use case with tests, a README Run section that
 [SA-001]: ../stakeholder-analysis.md
 [US-001]: ../user-stories.md
 [MIL-005]: ./mil-005-create-and-edit-posts.md
+[bb4ab74]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/bb4ab74b3e8d54bf96382b87bba9c277df4c8b09

@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-10 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Accepted on a Go review, RC-001; autonomous, not independent | [58e2942] |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Scope now includes the working Day 67 blog application (G4 to G6), runtime dependencies and end date 2026-11-18 | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Scope now includes the working Day 67 blog application (G4 to G6), runtime dependencies and end date 2026-11-18 | [bb4ab74] |
 
 ---
 
@@ -140,3 +140,4 @@ Proceed — G1 to G3 delivered the documentation; the application is three furth
 
 [SA-001]: ./stakeholder-analysis.md
 [58e2942]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/58e2942815801ad36122a1209bcbede2614a07e3
+[bb4ab74]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/bb4ab74b3e8d54bf96382b87bba9c277df4c8b09
