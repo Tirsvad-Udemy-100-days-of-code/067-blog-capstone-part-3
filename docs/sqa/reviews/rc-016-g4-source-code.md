@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [14b7b61] |
 
 ---
 
@@ -69,3 +69,4 @@ Go — every Mandatory criterion passes. Only the Optional criterion 13 fails an
 
 [MIL-004]: ../../milestones/mil-004-application-core-and-read.md
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
+[14b7b61]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/14b7b61659d548386715d692324f36cd61311de4
