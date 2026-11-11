@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | pending |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | Accepted on a Go review, RC-022; supervised, S01 accepted in chat | pending |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [0d98508] |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | Accepted on a Go review, RC-022; supervised, S01 accepted in chat | [0d98508] |
 
 ---
 
@@ -81,3 +81,4 @@ A capture script under `tests/e2e/`, a documented way to run it in a Docker cont
 [US-001]: ../user-stories.md
 [MIL-003]: ./mil-003-danish-and-malay-wiki.md
 [MIL-006]: ./mil-006-delete-and-documentation-sync.md
+[0d98508]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/0d98508c418c87e70142a6ee48f4030e88538cf4

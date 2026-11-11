@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S01 | Scope now includes the working Day 67 blog application (G4 to G6), runtime dependencies and end date 2026-11-18; Go on RC-009, supervised | [bb4ab74] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | Risk 1 and the end date updated for G7 (real screenshots, end date 2026-11-19); Go on RC-020, supervised | pending |
+| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | Risk 1 and the end date updated for G7 (real screenshots, end date 2026-11-19); Go on RC-020, supervised | [0d98508] |
 
 ---
 
@@ -141,3 +141,4 @@ Proceed — G1 to G3 delivered the documentation; the application is three furth
 [SA-001]: ./stakeholder-analysis.md
 [58e2942]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/58e2942815801ad36122a1209bcbede2614a07e3
 [bb4ab74]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/bb4ab74b3e8d54bf96382b87bba9c277df4c8b09
+[0d98508]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/0d98508c418c87e70142a6ee48f4030e88538cf4
