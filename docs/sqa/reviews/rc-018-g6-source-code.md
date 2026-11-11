@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [dcb624d] |
 
 ---
 
@@ -76,3 +76,4 @@ Go — every Mandatory criterion passes and no Optional criterion fails. Confirm
 [MIL-006]: ../../milestones/mil-006-delete-and-documentation-sync.md
 [BC-001]: ../../business-case.md
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
+[dcb624d]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/dcb624dfc80e7f8600fede54fb1c648d7f95d2a3

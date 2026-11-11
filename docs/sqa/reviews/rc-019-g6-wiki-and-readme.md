@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [dcb624d] |
 
 ---
 
@@ -77,3 +77,4 @@ Go, with one condition: criterion 14 (published wiki) stays pending until after 
 [MIL-006]: ../../milestones/mil-006-delete-and-documentation-sync.md
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
 [RC-008]: ./rc-008-wiki-all-languages.md
+[dcb624d]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/dcb624dfc80e7f8600fede54fb1c648d7f95d2a3
