@@ -13,8 +13,8 @@ set -euo pipefail
 readonly DEFAULT_IMAGE="mcr.microsoft.com/playwright/python:v1.55.0-noble"
 
 die() {
-  echo "error: $*" >&2
-  exit 1
+	echo "error: $*" >&2
+	exit 1
 }
 
 # The script that runs inside the container. Single quotes are deliberate: the
@@ -33,27 +33,27 @@ python tests/e2e/capture_screenshots.py /results
 '
 
 main() {
-  if [[ $# -gt 1 || "${1:-}" == -* ]]; then
-    echo "usage: run-in-docker.sh [RESULTS_FOLDER]" >&2
-    exit 2
-  fi
-  local results="${1:-docs/images}"
-  local image="${SCREENSHOT_IMAGE:-$DEFAULT_IMAGE}"
-  local root
-  root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+	if [[ $# -gt 1 || "${1:-}" == -* ]]; then
+		echo "usage: run-in-docker.sh [RESULTS_FOLDER]" >&2
+		exit 2
+	fi
+	local results="${1:-docs/images}"
+	local image="${SCREENSHOT_IMAGE:-$DEFAULT_IMAGE}"
+	local root
+	root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
-  command -v docker >/dev/null 2>&1 || die "docker is not installed or not on PATH."
-  mkdir -p "$results"
-  results="$(cd "$results" && pwd)"
+	command -v docker >/dev/null 2>&1 || die "docker is not installed or not on PATH."
+	mkdir -p "$results"
+	results="$(cd "$results" && pwd)"
 
-  # MSYS_NO_PATHCONV stops Git Bash on Windows from rewriting /repo and /results.
-  # On Windows, pwd gives /c/..., which Docker Desktop accepts.
-  MSYS_NO_PATHCONV=1 docker run --rm \
-    --ipc=host \
-    -v "$root:/repo:ro" \
-    -v "$results:/results" \
-    "$image" \
-    bash -c "$CONTAINER_SCRIPT"
+	# MSYS_NO_PATHCONV stops Git Bash on Windows from rewriting /repo and /results.
+	# On Windows, pwd gives /c/..., which Docker Desktop accepts.
+	MSYS_NO_PATHCONV=1 docker run --rm \
+		--ipc=host \
+		-v "$root:/repo:ro" \
+		-v "$results:/results" \
+		"$image" \
+		bash -c "$CONTAINER_SCRIPT"
 }
 
 main "$@"
