@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | pending |
+| 2026-11-11 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [62bc053] |
 
 ---
 
@@ -75,3 +75,4 @@ Go — every Mandatory criterion passes and no Optional criterion fails. This is
 
 [MIL-007]: ../../milestones/mil-007-real-screenshots.md
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
+[62bc053]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/62bc05333e9f6d5f480230cc59bb756611750b41
