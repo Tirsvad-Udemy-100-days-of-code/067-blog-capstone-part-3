@@ -13,7 +13,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S01 | Scope now includes the working Day 67 blog application (G4 to G6), runtime dependencies and end date 2026-11-18; Go on RC-009, supervised | [bb4ab74] |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S01 | Risk 1 and the end date updated for G7 (real screenshots, end date 2026-11-19); Go on RC-020, supervised | [0d98508] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective 8, success criterion 10, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-008; set the PO domain to education; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective 8, success criterion 10, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-008; set the PO domain to education; reviewed in autonomous mode, not independent | [5fdd0df] |
 
 ---
 
@@ -152,3 +152,4 @@ Proceed — G1 to G3 delivered the documentation; the application is three furth
 [0d98508]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/0d98508c418c87e70142a6ee48f4030e88538cf4
 [PP-001]: ./project-plan.md
 [MIL-008]: ./milestones/mil-008-framework-baseline.md
+[5fdd0df]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/5fdd0df00e7b3e3bf40c95942b5a3f57f249e1d2

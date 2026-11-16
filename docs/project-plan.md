@@ -13,7 +13,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S01 | Added gateways G4 to G6 for the blog application; end date moved to 2026-11-18; Go on RC-011, supervised | [bb4ab74] |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S01 | Added gateway G7 (real screenshots); end date moved to 2026-11-19; stale open issues removed; Go on RC-021, supervised | [0d98508] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway MIL-008 (G8) with its schedule row, scope coverage, dependency, risk and Gantt entries; recorded the move of the end date, the domain, the open pull request #58, the prompt log, the new traceability matrix and the CI in the Planning Assumptions and Open Issues; replaced `not yet synced` in the milestone column of the seven earlier gateways with the links to their milestones on the git host; marked the points about the illustrations as historical; set the domain to education; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway MIL-008 (G8) with its schedule row, scope coverage, dependency, risk and Gantt entries; recorded the move of the end date, the domain, the open pull request #58, the prompt log, the new traceability matrix and the CI in the Planning Assumptions and Open Issues; replaced `not yet synced` in the milestone column of the seven earlier gateways with the links to their milestones on the git host; marked the points about the illustrations as historical; set the domain to education; reviewed in autonomous mode, not independent | [5fdd0df] |
 
 ---
 
@@ -138,3 +138,4 @@ A No-Go at a gateway returns that gateway to S01 for rework; later gateways move
 [ms-449]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/milestone/449
 [MIL-008]: ./milestones/mil-008-framework-baseline.md
 [ms-588]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/milestone/588
+[5fdd0df]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/5fdd0df00e7b3e3bf40c95942b5a3f57f249e1d2

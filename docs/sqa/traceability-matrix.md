@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; created with the baseline milestone, with the review records of all documents (autonomous, not independent) | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; created with the baseline milestone, with the review records of all documents (autonomous, not independent) | [5fdd0df] |
 
 ---
 
@@ -100,3 +100,4 @@ No view, design or test-plan artifact exists (the scope excludes them), so the c
 [RC-028]: ./reviews/rc-028-milestone-008.md
 [RC-029]: ./reviews/rc-029-shell-runner-indent.md
 [RC-030]: ./reviews/rc-030-wiki-baseline.md
+[5fdd0df]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/5fdd0df00e7b3e3bf40c95942b5a3f57f249e1d2
