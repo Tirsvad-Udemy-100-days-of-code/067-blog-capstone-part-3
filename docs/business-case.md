@@ -4,15 +4,16 @@
 | Key | Value |
 | --- | --- |
 | ID | BC-001 |
-| CrossReference | [SA-001] |
+| CrossReference | [SA-001], [PP-001], [MIL-008] |
 | Language | en |
-| Domain | it |
+| Domain | education |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S01 | Scope now includes the working Day 67 blog application (G4 to G6), runtime dependencies and end date 2026-11-18; Go on RC-009, supervised | [bb4ab74] |
-| 2026-11-11 | Accepted | Jens Tirsvad Nielsen | S01 | Risk 1 and the end date updated for G7 (real screenshots, end date 2026-11-19); Go on RC-020, supervised | [0d98508] |
+| 2026-11-11 | Deprecated | Jens Tirsvad Nielsen | S01 | Risk 1 and the end date updated for G7 (real screenshots, end date 2026-11-19); Go on RC-020, supervised | [0d98508] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective 8, success criterion 10, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-008; set the PO domain to education; reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -44,6 +45,7 @@ A clear, illustrated walk-through of the lecture steps lets S01 consolidate the 
 5. Scan the repository with opengrep before each push.
 6. Build the Day 67 blog application (read, create, edit and delete posts) in `src/`, in layers that keep the business rules independent of Flask, with pytest tests for every route and use case.
 7. Keep the README and the wiki consistent with the code: each wiki step page names the file that implements it.
+8. Bring the finished project to the common baseline of the framework: the adopted framework release, a README that lists only the documents of the repository, project URL and licence metadata, the editor settings of the baseline, an `.env.example` in the framework's form that also lists the environment variables of the program, a shell script formatted as the baseline says, and a traceability matrix that covers the documents ([MIL-008]).
 
 ## Scope
 
@@ -55,11 +57,13 @@ A clear, illustrated walk-through of the lecture steps lets S01 consolidate the 
 - A screenshot for each lecture step in the README and the wiki.
 - A local opengrep scan before each push; the AI prompt log under `docs/ai-prompts/`.
 - The blog application: domain, application, infrastructure and presentation layers under `src/`, a SQLite database seeded with example posts, the routes `/`, `/post/<post_id>`, `/new-post`, `/edit-post/<post_id>` and `/delete/<post_id>`, and `pytest` tests (added in G4 to G6).
+- The baseline milestone [MIL-008]: the framework release, the README without the private framework files in its appendix, project URL and licence metadata, `.editorconfig`, `.env.example`, the indentation of the Docker runner script `tests/e2e/run-in-docker.sh`, a new traceability matrix, review records and a review of the wiki. It changes no behaviour of the program.
 
 ### Out of Scope
 
 - Hosting the blog on a public server, user accounts and login (later lecture days), and any copy of the course starting archive or of the course solutions; the code is written for this repository.
 - Secrets: `.env` holds personal tokens and is never read into the project, tested or committed.
+- Any change to `src/`, `docs/images/` or the wiki pages in the baseline milestone [MIL-008], and any change to `tests/` other than the indentation of `tests/e2e/run-in-docker.sh`. That milestone starts the program on no public address, retakes no screenshot and runs the tests only.
 
 ## Expected Benefits
 
@@ -90,6 +94,7 @@ The repository belongs to the Tirsvad Udemy 100 Days of Code collection, one rep
 | 7 | Reviews | 100 percent of artifacts have an `RC-*` verdict | Files in `docs/sqa/reviews/` |
 | 8 | Application routes | 5 of 5 work | Route tests pass in `python -m pytest` |
 | 9 | Code review | Every code milestone has a `Go` against its `qc-programming-*` checklist | Files in `docs/sqa/reviews/` |
+| 10 | The baseline milestone is done (objective 8) | `framework/scripts/check-readme.sh`, `check-languages.sh` and `check-editorconfig.sh` exit with code 0, `shfmt -d` finds no difference, `python -m pytest` passes, 100 % of the continuous integration (CI) checks of the pull request of [MIL-008] pass | The script exit codes and the pull request status on the git host |
 
 ## Risks
 
@@ -100,11 +105,12 @@ The repository belongs to the Tirsvad Udemy 100 Days of Code collection, one rep
 | Danish or Bahasa Malaysia text is machine quality | Misleading translation | English is authoritative; S01 reviews the languages S01 reads; Bahasa Malaysia is flagged as not reviewed by a native speaker |
 | A token leaks into the repository | Account compromise | `.env` is in `.gitignore`, is never opened by project tooling, and an opengrep scan runs before each push |
 | Gitea wiki publishing is not enabled | Wiki not visible | Keep the wiki in `docs/wiki/`, enable the wiki in the repository settings, verify after merge |
+| The documents of the baseline milestone [MIL-008] change documents that were accepted earlier, and an AI stand-in for S01 reviews them | A defect is missed because the review is not independent | Every review record of the baseline says `Mode: autonomous, not independent`, `src/` is not changed, the only change in `tests/` is the indentation of one script, the tests run before and after, and the end-of-run summary lists the reviews for challenge |
 
 ## Assumptions
 
 - S01 is Product Owner, developer and reviewer; the AI acts as stand-in reviewer in autonomous mode.
-- The PO language is English and the PO domain is IT.
+- The Product Owner (PO) language is English; the PO domain is education since [MIL-008] (it was information technology (IT) until then; the documents that [MIL-008] does not change keep the domain `it`, see the Open Issues of [PP-001]).
 - The Gitea repository exists and `.env` holds tokens for the personal use of S01.
 - Wiki pages are published by the `publish-wiki-pages.yml` workflow after merge.
 
@@ -115,6 +121,8 @@ The repository belongs to the Tirsvad Udemy 100 Days of Code collection, one rep
 - Application code is written layer by layer with tests; the code follows `coding-conventions` and `clean-architecture`.
 - One branch and one pull request per milestone.
 - Duration: 2026-11-10 to 2026-11-19 (extended from 2026-11-17 for the application milestones G4 to G6, and to 2026-11-19 for the screenshot milestone G7).
+- The baseline milestone [MIL-008] starts 2026-11-16 and is finished within one week, by 2026-11-23, so the end date of the plan moves from 2026-11-19 to 2026-11-23. An AI stand-in for S01 reviews and accepts the changed documents.
+- The program has no secret in the repository: the secret key and the database address are read from the environment variables `BLOG_SECRET_KEY` and `BLOG_DATABASE_URI` at run time (both optional; without a key a random one is made per start), and `.env.example` holds empty placeholders only.
 
 ## Cost–Benefit Assessment
 
@@ -142,3 +150,5 @@ Proceed — G1 to G3 delivered the documentation; the application is three furth
 [58e2942]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/58e2942815801ad36122a1209bcbede2614a07e3
 [bb4ab74]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/bb4ab74b3e8d54bf96382b87bba9c277df4c8b09
 [0d98508]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/commit/0d98508c418c87e70142a6ee48f4030e88538cf4
+[PP-001]: ./project-plan.md
+[MIL-008]: ./milestones/mil-008-framework-baseline.md
