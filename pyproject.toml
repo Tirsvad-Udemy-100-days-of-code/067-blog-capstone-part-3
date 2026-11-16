@@ -4,7 +4,9 @@ version = "0.2.0"
 description = "Udemy 100 Days of Code, Day 67: a RESTful blog with editing, and the documentation of the lecture."
 readme = "README.md"
 requires-python = ">=3.13"
+license = "AGPL-3.0-only"
 license-files = ["LICENSE"]
+authors = [{ name = "Jens Tirsvad Nielsen" }]
 # Runtime dependencies of the blog application (see the Business Case, scope).
 # Flask-WTF and Flask-CKEditor are used from G5 (the post form).
 dependencies = [
@@ -14,6 +16,11 @@ dependencies = [
     "Flask-CKEditor>=1.0,<2",
     "Bootstrap-Flask>=2.6,<3",
 ]
+
+[project.urls]
+Repository = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3"
+Documentation = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/wiki"
+"Issue tracker" = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/067-blog-capstone-part-3/issues"
 
 [project.optional-dependencies]
 dev = [
